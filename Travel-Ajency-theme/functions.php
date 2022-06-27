@@ -244,77 +244,66 @@ function global_email_meta_box_new() {
     }
 }
 
+ function create_db_for_booking()
+ {
+global $wpdb;
+global $jal_db_version;
+$table_name = $wpdb->prefix . 'travel_agency_booking';
+$charset_collate = $wpdb->get_charset_collate();
+$sql = "CREATE TABLE $table_name (
+  id mediumint(9) NOT NULL AUTO_INCREMENT,
+  email text NOT NULL,
+  name tinytext NOT NULL,
+  arrivaldate text NOT NULL,
+  country text NOT NULL,
+  phone text Not NULL,
+  adults text NOT NULL,
+  children text NOT NULL,
+  message text NOT NULL,
+  PRIMARY KEY  (id)
+) $charset_collate;";
 
-add_action( 'add_meta_boxes', 'global_email_meta_box_new' );
-function global_email_meta_box_callback( $post ) {
-    wp_nonce_field( 'global_notice_nonce', 'global_notice_nonce' );
-    $value = get_post_meta( $post->ID, '_global_notice', true ); ?>
-<input type = "text" style="width:100%" id="global_notice" name="global_notice"  value = <?php echo esc_attr( $value );?> <?php 
+require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+dbDelta( $sql );
 }
+ 
+ add_action('init' , 'create_db_for_booking');
 
-function first_firstname_meta_box_callback( $post ) {
-    // Add a nonce field so we can check for it later.
-    wp_nonce_field( 'first_firstname_nonce', 'first_firstname_nonce' );
-    $value_firstname = get_post_meta( $post->ID, '_first_firstname', true); ?>
-   <?php echo "testing name is : ".$value_firstname; ?>
-<input type = "text" style="width:100%" id="first_firstname" name="first_firstname" value = <?php echo esc_attr( $value_firstname );?> 
-<?php 
-}
-
-function global_lastname_meta_box_callback( $post ) {
-    wp_nonce_field( 'lastname_notice_nonce', 'lastname_notice_nonce' );
-    $lastname = get_post_meta( $post->ID, '_lastname_notice', true ); ?>
-    <?php echo $lastname ; ?>
-<input type = "text" style="width:100%" id="last_notice" name="last_notice"  value = <?php echo esc_attr( $lastname );?> <?php 
-}
-
-/**
- * When the post is saved, saves our custom data.
- *
- * @param int $post_id
- */
-function save_global_notice_meta_box_data_new( $post_id ) {
-    // Check if our nonce is set.
-    if ( ! isset( $_POST['first_firstname_nonce'] ) ) {
-        return;
-    }
-    // Verify that the nonce is valid.
-    if ( ! wp_verify_nonce( $_POST['first_firstname_nonce'], 'first_firstname_nonce' ) ) {
-        return;
-    }
-    // If this is an autosave, our form has not been submitted, so we don't want to do anything.
-    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
-        return;
-    }
-    // Check the user's permissions.
-    if ( isset( $_POST['post_type'] ) && 'page' == $_POST['post_type'] ) {
-        if ( ! current_user_can( 'edit_page', $post_id ) ) {
-            return;
+ function insert_in_db_booking(){
+  global $wpdb;
+     if ( isset( $_POST['submit'] ) ){
+        $email = $_POST['email'];
+        $name  = $_POST['fname'];
+        $lname = $_POST['lname'];
+        $fullname = $name." ".$lname;
+        $arrivaldate = $_POST['arrivaldate'];
+        $country  = $_POST['country'];
+        $phonenumber = $_POST['phonenumber'];
+        $adults = $_POST['adults'];
+        $children = $_POST['children'];
+        $subject  = $_POST['subject'];
+        if($email == ' ' || $name == ' ' ||  $lname = ' ' ){
+            echo '<script>alert("please insert the values")</script>';
         }
+        else{
+  $result = $wpdb->insert( 'wp_travel_agency_booking', array(
+    'email' => $email,
+    'name' => $fullname,
+    'arrivaldate' =>  $arrivaldate,
+    'country' => $country,
+    'phone'=> $phonenumber,
+    'adults' => $adults,
+    'children' => $children,
+    'message'  => $subject ));
+ if( FALSE === $result )
+    {
+    echo( "Failed!" );
+    } 
+else {
+    echo( "<script>alert('Booking Completed Succesfully')</script>" );
     }
-    else {
-
-        if ( ! current_user_can( 'edit_post', $post_id ) ) {
-            return;
-        }
-    }
-    /* OK, it's safe for us to save the data now. */
-    // Make sure that it is set.
-    if ( ! isset( $_POST['first_firstname_nonce'] ) ) {
-        return;
-    }
-    // Sanitize user input.
-    $my_data = sanitize_text_field( $_POST['first_firstname_nonce'] );
-
-    // Update the meta field in the database.
-    update_post_meta( $post_id, '_first_firstname', $my_data );
 }
-add_action( 'save_post', 'save_global_notice_meta_box_data_new' );
-function global_notice_before_post( $content ) {
-    global $post;
-    // retrieve the global notice for the current post
-    $global_notice = esc_attr( get_post_meta( $post->ID, '_first_firstname', true ) );
-    $notice = "<div class='sp_global_notice'>$global_notice</div>";
-    return $notice . $content;
-}
-add_filter( 'the_content', 'global_notice_before_post' );
+ }
+
+ }
+ add_action('init' , 'insert_in_db_booking');
