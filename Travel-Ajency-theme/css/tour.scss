@@ -1,0 +1,254 @@
+// banner Css
+
+.adventure {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6)),
+    url("../images/tour/adrian-valverde-pm6ok0pnPkg-unsplash.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 266px;
+  padding-bottom: 422px;
+  background-image:  url("../images/tour/adrian-valverde-pm6ok0pnPkg-unsplash.png");
+  .adven-text {
+    text-align: center;
+    color: white;
+    h3 {
+      font-size: 72px;
+      font-weight: bold;
+      padding-bottom: 18px;
+    }
+    p {
+      font-size: 36px;
+      font-weight: bold;
+      padding-bottom: 41px;
+    }
+  }
+  .main_bg {
+    justify-content: center;
+    align-items: center;
+    background-color: #62633f;
+    border-radius: 22px;
+    padding: 27px 32px;
+    margin-top: 23px;
+    .one {
+      padding: 0 20px;
+    }
+    input {
+      padding: 12px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+    }
+    select {
+      padding: 12px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+    }
+    button {
+      padding: 12px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      color: white;
+      background-color: #00daed;
+      border-radius: 10px;
+      outline: 0;
+    }
+  }
+}
+
+// banner css End
+
+// hotel css Start
+.tickets {
+  .slider_Section {
+    .owl-carousel {
+      .items {
+        .tour_text {
+          // width: 400px;
+          background-color: white;
+          padding: 13px 19px 30px 19px;
+          text-align: center;
+          background-color: #FFF0E7;
+        }
+        .items_btn {
+          padding-bottom: 34px;
+          padding-top: 10px;
+          button {
+            width: 90px;
+            height: 28px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            font-size: 18px;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// hotel css End
+
+// Destination css Start
+
+.destination {
+  background-image: url("../images/about/Mask\ Group\ 1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+
+  .travel_heading {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  .mg {
+    padding-bottom: 100px;
+  }
+  .dest_img {
+    img {
+      width: 100%;
+    }
+  }
+  .text_dest {
+    background-color: white;
+    padding: 12px 8px;
+    h2 {
+      color: black;
+      font-size: 36px;
+      line-height: 48px;
+    }
+    p {
+      color: #8d9092;
+    }
+  }
+
+  .feilds {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column !important;
+    input {
+      padding: 12px 25px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      font-size: 18px;
+      border: none;
+      width: 360px;
+    }
+    button {
+      padding: 13px 81px;
+      border-radius: 8px;
+      font-size: 18px;
+      color: white;
+      background-color: #00daed;
+      border: none;
+      outline: 0;
+    }
+  }
+}
+
+// Destination css End
+
+// Media Quieres
+@media (max-width: 1300px) {
+  .adventure .main_bg{
+    margin: 0 auto;
+    max-width: 800px;
+    display: block !important;
+  }
+  .adventure .main_bg input{
+      width: 100%;
+  }
+  .adventure .main_bg select{
+      width: 100%;
+  }
+  .adventure .main_bg .one.search_btn{
+      text-align: center;
+  }
+  .adventure .main_bg .one{
+      width: 100%;
+      margin-bottom: 10px;
+  }
+}
+
+@media(max-width:1024px){
+  .adventure .main_bg{
+    margin: 0 auto;
+    max-width: 700px;
+  }
+  .adventure{
+    padding-bottom: 150px;
+  }
+  .adventure .main_bg input{
+      width: 100%;
+  }
+  .adventure .main_bg select{
+      width: 100%;
+  }
+  .adventure .main_bg .one.search_btn{
+      text-align: center;
+  }
+
+}
+@media (max-width: 768px) {
+    .adventure .adven-text h3 {
+      font-size: 60px;
+  }
+  .adventure .adven-text p {
+      font-size: 25px;
+  }
+  .destination .dest_text2 h3 {
+      font-size: 40px;
+  }
+}
+@media (max-width: 440px) {
+  .adventure{
+    padding-top: 130px;
+  }
+  .adventure .adven-text h3 {
+    font-size: 30px;
+  }
+  .adventure .adven-text p {
+    font-size: 20px;
+  }
+  .feilds input[type="text"] {
+    width: 234px !important;
+  }
+  .main_bg .f_input input {
+    padding: 12px 10px !important;
+  }
+  .adventure .main_bg .one {
+    padding: 0 0;
+  }
+  .tickets .multiple_items .items .items_text {
+    padding: 0px 0px;
+  }
+  .adventure .main_bg button {
+    padding: 6px 10px;
+    font-size: 17px;
+  }
+  .destination .dest_text2 h3 {
+    font-size: 25px;
+  }
+  .text2 h4 {
+    font-size: 16px;
+  }
+  .tickets .multiple_items .items .items_text .items_btn {
+    text-align: unset;
+  }
+  .tickets .multiple_items .items .items_img {
+    width: 270px;
+  }
+  .tickets .slider_Section .multiple_items .items .tour_text {
+    width: 270px;
+  }
+  .tickets .tickets_text {
+    text-align: center;
+  }
+}

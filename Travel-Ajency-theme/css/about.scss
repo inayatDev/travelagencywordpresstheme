@@ -1,0 +1,165 @@
+// About css
+.about {
+  background-image: url("../images/about/pietro-de-grandi-T7K4aEPoGGk-unsplash.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .about_text {
+    text-align: center;
+    padding: 364px 0;
+    color: white;
+    h2 {
+      font-size: 131px;
+    }
+    p {
+      font-size: 36px;
+      font-weight: bold;
+    }
+  }
+}
+
+// About css End
+
+// Story css Strt
+
+.story {
+  .top_text {
+    padding-top: 30px;
+    h3 {
+      font-size: 36px;
+    }
+    p {
+      color: #8d9092;
+      font-size: 18px;
+    }
+  }
+  .story_img {
+    max-width: 500px;
+    padding-top: 39px;
+    img {
+      width: 100%;
+    }
+  }
+  .story_numb {
+    text-align: center;
+    padding-top: 68px;
+    h3 {
+      font-size: 121px;
+      color: #00daed;
+      font-weight: 100;
+    }
+    p {
+      font-size: 18px;
+      color: #8d9092;
+    }
+  }
+}
+
+// trp section csss
+
+.trip {
+  .trip_heading {
+    padding-top: 40px;
+    padding-bottom: 28px;
+    h3 {
+      font-size: 36px;
+    }
+  }
+  .trip_img {
+    // max-width: 200px;
+    margin-bottom: 25px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// Feature Css Start
+.feature {
+  padding-top: 66px;
+  padding-bottom: 60px;
+  .feature_Sec {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 27px 25px;
+    .fet_img {
+      max-width: 100px;
+      min-height: 150px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Feature Css End
+
+// carosel css
+
+.carosel {
+  .carosel_img {
+    img {
+      text-align: center;
+      margin: 0 auto;
+    }
+    .carosel_text {
+      h4 {
+        font-size: 44px;
+        font-weight: 700;
+        font-family: Poppins;
+        text-align: center;
+      }
+      p {
+        font-size: 40px;
+        font-family: Poppins;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// Media Quieres
+
+@media (max-width: 768px) {
+  .about .about_text h2 {
+    font-size: 78px;
+  }
+  .about .about_text p {
+    font-size: 25px;
+  }
+  .story .story_numb h3 {
+    font-size: 70px;
+  }
+  .carosel .carosel_img .carosel_text h4 {
+    font-size: 35px;
+  }
+    .carosel .carosel_img .carosel_text p {
+      font-size: 28px;
+    }
+  }
+  @media (max-width: 375px) {
+    .about .about_text h2 {
+        font-size: 63px;
+    }
+    .about .about_text p {
+        font-size: 20px;
+    }
+    .carosel .carosel_img .carosel_text h4 {
+        font-size: 29px;
+    }
+    .carosel .carosel_img .carosel_text p {
+        font-size: 20px;
+    }
+    // .about .about_text h2 {
+    //   font-size: 47px;
+    // }
+    // .trip .trip_heading .trip_img {
+    //   margin-bottom: 10px !important;
+    // }
+  }
+

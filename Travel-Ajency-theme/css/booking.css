@@ -1,0 +1,117 @@
+.booking_section {
+  background-image: url(../images/booking/booking.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 42;
+  padding-top: 409px;
+  padding-bottom: 337px;
+}
+.booking_section .booking_text {
+  text-align: center;
+}
+.booking_section .booking_text h4 {
+  font-family: Hollanda;
+  font-size: 186px;
+  color: white;
+}
+
+.contact {
+  background-color: #9A9A9A;
+  margin: 50px;
+  border-radius: 30px;
+}
+.contact .extra textarea {
+  width: 100%;
+  max-width: 1538px;
+  height: 357px;
+  border: 1px solid black;
+  padding: unset;
+}
+.contact .extra p {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: roboto;
+  padding-bottom: 10px;
+}
+
+.row {
+  width: 100%;
+  max-width: 1538px;
+}
+
+.contact_form .row .col-lg-3 {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.contact_form .row .col-lg-3 input {
+  max-width: 344px;
+  width: 100%;
+  height: 42px;
+  border: 1px solid black;
+}
+.contact_form .row .col-lg-3 p {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: roboto;
+  padding-bottom: 10px;
+}
+
+.contact_button {
+  text-align: center;
+  padding-top: 73px;
+  padding-bottom: 77px;
+}
+.contact_button button {
+  background-color: #00BDDF;
+  color: white;
+  padding: 7px 29px;
+  border: none;
+  border-radius: 7px;
+  margin-right: 10px;
+}
+
+@media (max-width: 992px) {
+  .contact_form {
+    text-align: center;
+  }
+
+  .contact_button {
+    padding-top: 29px;
+    padding-bottom: 40px;
+  }
+
+  .contact .extra textarea {
+    max-width: 752px;
+    height: 301px;
+  }
+}
+@media (max-width: 768px) {
+  .booking_section .booking_text h4 {
+    font-size: 105px;
+  }
+
+  .contact_form .row .col-lg-3 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .booking_section .booking_text h4 {
+    font-size: 68px;
+  }
+
+  .contact {
+    margin: unset;
+    border-radius: unset;
+  }
+
+  .contact_form .row .col-lg-3 {
+    margin-top: 10px;
+  }
+
+  .contact_button button {
+    margin-bottom: 10px;
+  }
+}/*# sourceMappingURL=booking.css.map */

@@ -1,0 +1,125 @@
+.blog_banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.6)), url("../images/blog/frank-mckenna-OD9EOzfSOh0-unsplash.png");
+  padding-top: 424px;
+  padding-bottom: 327px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.blog_banner h2 {
+  font-size: 186px;
+  font-weight: 100;
+  color: white;
+}
+
+.bottom_all {
+  padding-top: 73px;
+  background-color: #F1F1F1;
+}
+.bottom_all .left {
+  margin-right: 59px;
+}
+.bottom_all .left .b_search {
+  padding: 18px 22px;
+  background-color: #d5d5d5;
+  margin-bottom: 56px;
+}
+.bottom_all .left .b_search input {
+  padding: 5px 13px;
+  margin-right: 23px;
+  border-radius: 9px;
+}
+.bottom_all .left .b_search button {
+  background-color: #00bddf;
+  color: black;
+  border: none;
+  padding: 5px 5px;
+  border-radius: 5px;
+}
+.bottom_all .left .b_recent {
+  margin-bottom: 46px;
+  background-color: white;
+}
+.bottom_all .left .b_recent .rexent_head {
+  background-color: #D5D5D5;
+  padding: 17px 0;
+  text-align: center;
+}
+.bottom_all .left .b_recent .rexent_head h3 {
+  font-size: 36px;
+  color: black;
+}
+.bottom_all .left .b_recent .para {
+  padding: 22px 28px;
+}
+.bottom_all .mid .b_recent {
+  width: 418px;
+  background-color: white;
+  margin-bottom: 56px;
+}
+.bottom_all .mid .para {
+  padding-top: 15px;
+  padding-left: 29px;
+  padding-bottom: 55px;
+}
+
+@media (max-width: 1440px) {
+  .bottom_all .left .b_search {
+    padding: 10px 10px;
+  }
+
+  .bottom_all .left .b_search input {
+    padding: 5px 10px;
+    margin-right: 20px;
+  }
+
+  .bottom_all .left .b_search {
+    text-align: center;
+  }
+
+  .bottom_all .mid .b_recent {
+    width: unset;
+  }
+
+  input[type=text] {
+    width: 100%;
+  }
+
+  .bottom_all .left .b_search button {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 1024px) {
+  .bottom_all .left {
+    margin-right: unset;
+  }
+}
+@media (max-width: 440px) {
+  .blog_banner h2 {
+    font-size: 70px;
+  }
+
+  .bottom_all .left .b_search {
+    text-align: center;
+    width: 289px;
+  }
+
+  .bottom_all .mid .b_recent {
+    width: unset;
+  }
+
+  .bottom_all .mid .para {
+    text-align: center;
+    padding: 5px 10px !important;
+  }
+}
+@media (max-width: 375px) {
+  .bottom_all .mid .para {
+    padding-left: unset;
+    text-align: center;
+  }
+
+  .bottom_all .left .b_search {
+    width: unset;
+  }
+}/*# sourceMappingURL=blog.css.map */

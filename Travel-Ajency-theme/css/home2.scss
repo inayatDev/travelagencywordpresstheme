@@ -1,0 +1,640 @@
+/* Global css start */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Slab";
+  font-weight: 400;
+  font-size: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+a {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li:hover {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+.container {
+  max-width: 1550px;
+}
+//   .navbar-toggler {
+//     background-color: #00aed8;
+//   }
+
+/* Global css end */
+
+//   HEader Css
+
+.banner {
+  background-image: url("../images/home2/kalen-emsley-uSFOwYo1qEw-unsplash.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 376px;
+  .banner_text {
+    h1 {
+      font-size: 36px;
+      color: white;
+      line-height: 48px;
+      span {
+        font-size: 72px;
+        font-weight: bold;
+        color: #00a2ca;
+        display: block;
+        line-height: 95px;
+      }
+    }
+    p {
+      font-size: 36px;
+      color: white;
+      line-height: 48px;
+    }
+  }
+  .banner_button {
+    padding-bottom: 370px;
+    padding-top: 22px;
+    button {
+      width: 254px;
+      height: 72px;
+      background-color: #00a2ca;
+      color: white;
+      font-size: 37.5px;
+      font-weight: bold;
+      border: none;
+      outline: none;
+      margin-left: 51px;
+    }
+    button:hover {
+      background-color: white;
+      color: #00a2ca;
+    }
+  }
+}
+
+//   HEader Css End
+
+// Popular Destination Css Start
+
+.destination {
+  background-color: black;
+  padding-top: 44px;
+  .top_text {
+    text-align: center;
+    padding-bottom: 79px;
+    h2 {
+      color: white;
+      font-size: 36px;
+      line-height: 48px;
+      font-weight: bold;
+      padding-bottom: 5px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 24px;
+      color: white;
+    }
+  }
+  .mid {
+    .place {
+      .place_img {
+        position: relative;
+      }
+      .inner_div {
+        width: 373px;
+        background-color: #ffffff;
+        opacity: 0.8;
+        color: white;
+        position: absolute;
+        bottom: 30px;
+        left: 35px;
+        border-radius: 16px;
+        color: black;
+        padding: 30px 20px;
+        h4 {
+          font-size: 18px;
+          line-height: 24px;
+          font-weight: bold;
+        }
+        h3 {
+          font-size: 36px;
+          font-weight: bold;
+          line-height: 48px;
+        }
+        p {
+          font-size: 18px;
+          line-height: 24px;
+          padding-bottom: 35px;
+        }
+      }
+    }
+  }
+  .destination_btn {
+    padding-bottom: 63px;
+    padding-top: 94px;
+    text-align: center;
+    button {
+      background-color: #00a2ca;
+      width: 390px;
+      font-size: 36px;
+      padding: 13px 0;
+      font-weight: bold;
+      border: none;
+      outline: none;
+      border-radius: 11px;
+    }
+    button:hover {
+      background-color: white;
+      color: #00a2ca;
+    }
+  }
+}
+// Popular Destination Css End
+
+// PAckages Css Start
+
+.packages {
+  background-color: #ffffff;
+  padding-top: 36px;
+  .top_text {
+    text-align: center;
+    color: black;
+    h3 {
+      font-size: 36px;
+      font-weight: bold;
+      line-height: 48px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 24px;
+      padding-bottom: 42px;
+    }
+  }
+  .main_bottom {
+    width: 100%;
+    display: flex;
+    padding-bottom: 56px;
+    .left {
+      width: 35%;
+      .left_img {
+        img {
+          min-height: 448px;
+        }
+      }
+    }
+    .mid {
+      width: 50%;
+      background-color: #d1d1d1;
+      padding: 41px 46px;
+      h3 {
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 48px;
+      }
+      P {
+        font-size: 18px;
+        line-height: 24px;
+      }
+      .mid_button {
+        margin-top: 35px;
+        display: flex;
+        background-color: #ffffff;
+        max-width: 343px;
+        border-radius: 35px;
+        padding: 10px 32px;
+        .icon1 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding-right: 12px;
+          border-right: 2px solid #707070;
+          .icon_img {
+            padding-right: 7px;
+            padding-left: 15px;
+            width: 100%;
+            // img {
+            // }
+            p {
+              padding-right: 15px;
+              font-size: 18px;
+              font-weight: bold;
+            }
+          }
+        }
+        .icon1:last-child {
+          border-right: unset;
+        }
+      }
+    }
+    .right {
+      width: 25%;
+      background-color: #00a2ca;
+      border-top-right-radius: 54px;
+      border-bottom-right-radius: 54px;
+      padding: 100px 65px;
+      color: white;
+      .price_sec {
+        span {
+          img {
+            max-width: 119px;
+          }
+        }
+        p {
+          font-size: 24px;
+          font-weight: bold;
+          padding-bottom: 21px;
+        }
+        h4 {
+          font-size: 72px;
+          font-weight: bold;
+        }
+        button {
+          background-color: white;
+          color: black;
+          width: 152px;
+          border-radius: 9px;
+          padding: 6px 27px;
+          font-size: 18px;
+          font-weight: bold;
+          border: none;
+          outline: none;
+        }
+      }
+    }
+  }
+}
+// PAckages css End
+
+// Flight Css Start
+.flights {
+  background-color: black;
+  padding-top: 44px;
+  .top_text {
+    text-align: center;
+    padding-bottom: 79px;
+    h3 {
+      color: white;
+      font-size: 36px;
+      line-height: 48px;
+      font-weight: bold;
+      padding-bottom: 24px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 24px;
+      color: white;
+    }
+  }
+  .mid {
+    .place {
+      .place_img {
+        position: relative;
+      }
+      .inner_div {
+        width: 373px;
+        background-color: #ffffff;
+        opacity: 0.8;
+        color: white;
+        position: absolute;
+        bottom: 30px;
+        left: 35px;
+        border-radius: 16px;
+        color: black;
+        padding: 30px 20px;
+        h4 {
+          font-size: 18px;
+          line-height: 24px;
+          font-weight: bold;
+        }
+        h3 {
+          font-size: 36px;
+          font-weight: bold;
+          line-height: 48px;
+        }
+        p {
+          font-size: 18px;
+          line-height: 24px;
+          padding-bottom: 35px;
+        }
+      }
+    }
+  }
+  .destination_btn {
+    padding-bottom: 63px;
+    padding-top: 94px;
+    text-align: center;
+    button {
+      background-color: #00a2ca;
+      width: 282px;
+      padding: 7px 0;
+      font-size: 36px;
+      font-weight: bold;
+      border: none;
+      outline: none;
+      border-radius: 11px;
+    }
+    button:hover {
+      background-color: white;
+      color: #00a2ca;
+    }
+  }
+}
+
+// Flight Css End
+
+//   Travelling Gallery Css Start
+
+.travelers {
+  margin-bottom: 73px;
+  h3 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 48px;
+    padding-top: 51px;
+    padding-bottom: 91px;
+  }
+    .left {
+      width: 100%;
+      max-width: 548px;
+      .left_img {
+        max-width: 536px;
+        margin: 0 auto;
+        img {
+          width: 100%;
+          min-height: 311px;
+        }
+      }
+      .left_bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        .img_one {
+          max-width: 253px;
+          margin-right: 30px;
+          img {
+            min-height: 323px;
+            width: 100%;
+          }
+        }
+        .img_two {
+          max-width: 253px;
+
+          img {
+            width: 100%;
+            min-height: 323px;
+          }
+        }
+      }
+    }
+    .mid_img{
+        max-width: 383px;
+        margin: 0 auto;
+        
+        img{
+            width: 100%;
+            min-height: 654px;
+        }
+    }
+    .right_img{
+        margin: 0 auto;
+          .img_three{
+              max-width: 481px;
+              margin-bottom: 8px;
+              // margin: 0 auto;
+              img{
+                  width: 100%;
+                  min-height: 323px;
+              }
+          }
+          .img_four{
+              max-width: 481px;
+              margin: 0 auto;
+              img{
+                  width: 100%;
+                  min-height: 323px;
+              }
+          }
+    }
+}
+//   Travelling Gallery Css End
+
+// Booking Section Css Start
+.booking {
+  background-image: url("../images/home2/paul-gilmore-km74CLco7qs-unsplash.png");
+  background-size: cover;
+  background-position: center;
+  padding-top: 128px;
+  text-align: center;
+  .booking_text {
+    h3 {
+      font-size: 72px;
+      font-weight: bold;
+      line-height: 95px;
+      color: white;
+    }
+    span {
+      display: block;
+    }
+    p {
+      font-size: 18px;
+      line-height: 24px;
+      padding-bottom: 36px;
+      color: white;
+    }
+  }
+  .booking_btn {
+    padding-top: 36px;
+    padding-bottom: 104px;
+    button {
+      background-color: #00a2ca;
+      width: 254px;
+      font-size: 37px;
+      font-weight: bold;
+      color: white;
+      padding: 12px 0;
+      margin-right: 32px;
+      border: none;
+      outline: none;
+      line-height: 49px;
+    }
+  }
+}
+// Booking Section Css End
+
+// DEtails Section css Start
+
+.paragraph {
+  padding-top: 40px;
+  h3 {
+    text-align: center;
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: bold;
+  }
+  p {
+    font-size: 18px;
+    line-height: 24px;
+    padding-bottom: 73px;
+  }
+}
+// DEtails Section css End
+
+// MEdia Queries
+@media (max-width: 1460px) {
+  .travelers .images_section {
+    flex-wrap: wrap;
+    // justify-content: center;
+    justify-content: center;
+  }
+  .travelers .images_section .left {
+    width: 48%;
+    max-width: unset;
+    margin-right: 15px;
+  }
+  .travelers .images_section .left .left_img {
+    max-width: 679px;
+    min-height: 339px;
+  }
+
+  .travelers .images_section .left .left_img img {
+    // min-height: 411px;
+    max-width: 679px;
+    min-height: 339px;
+  }
+  .travelers .images_section .left .left_bottom {
+    max-width: 343px;
+    min-height: 427px;
+  }
+  .travelers .images_section .left .left_bottom img {
+    max-width: 346px;
+    min-height: 422px;
+  }
+  .travelers .images_section .left .left_bottom .one {
+    max-width: 346px;
+    min-height: 422px;
+  }
+  .travelers .images_section .mid_img {
+    width: 50%;
+
+    max-width: 500px;
+    min-height: 654px;
+  }
+  .travelers .images_section .mid_img img {
+    // max-width: 493px;
+    min-height: 842px;
+    object-fit: cover;
+  }
+  .travelers .images_section .right_img {
+    display: flex;
+    width: 100%;
+    max-width: unset;
+    margin-top: 15px;
+    max-width: 1211px;
+  }
+  .travelers .images_section .right_img .two {
+    padding-bottom: unset;
+    margin-right: 15px;
+    max-width: 705px;
+    min-height: 473px;
+  }
+}
+@media (max-width: 1300px) {
+  .destination .mid .place .inner_div {
+    width: 280px;
+    left: 25px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .packages .main_bottom {
+    flex-wrap: wrap;
+  }
+  .packages .main_bottom .mid {
+    width: 100%;
+    order: 1;
+    margin-top: 30px;
+    border-radius: 54px;
+  }
+  .packages .main_bottom .left {
+    width: 48%;
+    margin-right: 15px;
+  }
+  .packages .main_bottom .right {
+    width: 50%;
+  }
+}
+
+@media (max-width: 991px) {
+  .place {
+    margin-bottom: 15px;
+  }
+  .destination .mid .place .inner_div {
+    width: 394px;
+  }
+  .flights .mid .place .inner_div {
+    width: 394px;
+  }
+  .travelers .left{
+      margin: 0 auto;
+  }
+  .travelers .mid_img{
+      margin: 15px auto;
+  }
+  .travelers .right_img .img_three{
+      margin: 0 auto;
+  }
+  .travelers .right_img .img_four{
+      margin: 15px auto;
+  }
+}
+@media (max-width: 768px) {
+  .banner .banner_button button {
+    margin-bottom: 15px;
+  }
+  .packages .main_bottom .left {
+    width: 100%;
+  }
+  .packages .main_bottom .right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .destination .mid .place .inner_div {
+    width: 265px;
+  }
+  .flights .mid .place .inner_div {
+    width: 265px;
+  }
+}

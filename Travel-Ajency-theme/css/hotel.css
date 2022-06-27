@@ -1,0 +1,211 @@
+.adventure {
+  background: linear-gradient(rgba(0, 0, 0, 0.6)), url("../images/about/damiano-baschiera-hFXZ5cNfkOk-unsplash.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 266px;
+  padding-bottom: 422px;
+}
+.adventure .adven-text {
+  text-align: center;
+  color: white;
+}
+.adventure .adven-text h3 {
+  font-size: 72px;
+  font-weight: bold;
+  padding-bottom: 18px;
+}
+.adventure .adven-text p {
+  font-size: 36px;
+  font-weight: bold;
+  padding-bottom: 41px;
+}
+.adventure .main_bg {
+  justify-content: center;
+  align-items: center;
+  background-color: #62633F;
+  border-radius: 22px;
+  padding: 27px 32px;
+  margin-top: 23px;
+}
+.adventure .main_bg .one {
+  padding: 0 20px;
+}
+.adventure .main_bg input {
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+}
+.adventure .main_bg select {
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+}
+.adventure .main_bg button {
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  color: white;
+  background-color: #00DAED;
+  border-radius: 10px;
+}
+
+.destination {
+  background-image: url("../images/about/Mask Group 1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 98px 112px;
+}
+.destination .dest_text2 {
+  text-align: center;
+}
+.destination .dest_text2 h3 {
+  font-size: 52px;
+  font-weight: bold;
+  padding-bottom: 13px;
+}
+.destination .feilds {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column !important;
+}
+.destination .feilds input {
+  padding: 12px 25px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  border: none;
+  width: 360px;
+}
+.destination .feilds button {
+  padding: 13px 81px;
+  border-radius: 8px;
+  font-size: 18px;
+  color: white;
+  background-color: #00DAED;
+  border: none;
+}
+
+@media (max-width: 1300px) {
+  .adventure .main_bg {
+    margin: 0 auto;
+    max-width: 800px;
+    display: block !important;
+  }
+
+  .adventure .main_bg input {
+    width: 100%;
+  }
+
+  .adventure .main_bg select {
+    width: 100%;
+  }
+
+  .adventure .main_bg .one.search_btn {
+    text-align: center;
+  }
+
+  .adventure .main_bg .one {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 1024px) {
+  .adventure .main_bg {
+    margin: 0 auto;
+    max-width: 700px;
+  }
+
+  .adventure {
+    padding-bottom: 150px;
+  }
+
+  .adventure .main_bg input {
+    width: 100%;
+  }
+
+  .adventure .main_bg select {
+    width: 100%;
+  }
+
+  .adventure .main_bg .one.search_btn {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .destination .feilds button {
+    padding: 9px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  .adventure .adven-text h3 {
+    font-size: 60px;
+  }
+
+  .adventure .adven-text p {
+    font-size: 25px;
+  }
+
+  .destination .dest_text2 h3 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 440px) {
+  .adventure {
+    padding-top: 130px;
+  }
+
+  .adventure .adven-text h3 {
+    font-size: 40px;
+  }
+
+  .adventure .adven-text p {
+    font-size: 26px;
+  }
+
+  .feilds input[type=text] {
+    width: 234px !important;
+  }
+
+  .main_bg .f_input input {
+    padding: 12px 10px !important;
+  }
+
+  .adventure .main_bg .one {
+    padding: 0 0;
+  }
+
+  .tickets .multiple_items .items .items_text {
+    padding: 0px 0px;
+  }
+
+  .destination .dest_text2 h3 {
+    font-size: 25px;
+  }
+
+  .text2 h4 {
+    font-size: 16px;
+  }
+
+  .destination .feilds input {
+    font-size: 15px;
+  }
+}
+@media (max-width: 375px) {
+  .destination .feilds button {
+    padding: 10px 7px;
+  }
+
+  .destination .feilds button {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=hotel.css.map */
