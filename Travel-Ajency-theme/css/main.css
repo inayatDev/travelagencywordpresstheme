@@ -1,0 +1,1530 @@
+/* Global css start */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Slab";
+  font-weight: 400;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+a {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li:hover {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.navbar-toggler {
+  background-color: #00aed8;
+}
+
+/* Global css end */
+/* header css start */
+header {
+  background-color: black;
+}
+header .navbar {
+  max-width: 1700px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+header .nav_image {
+  max-width: 120px;
+}
+header .nav_image img {
+  width: 100%;
+}
+header .navbar-collapse {
+  max-width: 750px;
+  margin-left: auto;
+}
+header .navbar-collapse li {
+  margin-left: 40px;
+}
+header .navbar-collapse li a {
+  color: white !important;
+}
+header .navbar-collapse li :hover {
+  color: #3d6f7f !important;
+}
+
+.owl-next:focus {
+  outline: 0;
+}
+
+.owl-prev:focus {
+  outline: 0;
+}
+
+.banner {
+  background-image: url("../images/home/banner.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.banner .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+.banner .banner_text {
+  padding-top: 640px;
+  padding-bottom: 90px;
+}
+.banner .banner_text h1 {
+  font-size: 36px;
+  color: #020709;
+  font-weight: 700;
+  padding-bottom: 55px;
+}
+.banner .banner_text h1 span {
+  font-size: 74px;
+}
+.banner .banner_text button {
+  width: 190px;
+  height: 66px;
+  border-radius: 10px;
+  background-color: #00cee7;
+  border: unset;
+  margin-left: 18px;
+  font-size: 32px;
+  color: white;
+}
+.banner .banner_text button:hover {
+  background-color: white;
+  color: #00aed8;
+}
+
+.flight {
+  padding-bottom: 10px;
+}
+.flight .flight_Search {
+  padding: 30px 35px;
+  width: 100%;
+  max-width: 1700px;
+  margin: 10px auto;
+  background-color: #e3e3e3;
+  border-radius: 10px;
+}
+.flight .flight_Search h2 {
+  padding-bottom: 39px;
+  font-size: 36px;
+}
+.flight .flight_Search .flight_buttons button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #00cee7;
+  margin-right: 24px;
+}
+.flight .flight_Search .flight_btn button {
+  margin-top: 30px;
+  width: 105px;
+  height: 43px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+}
+.flight .flight_Search .flight_btn button:hover {
+  color: #00cee7;
+}
+.flight .flight_Search .search_options {
+  display: flex;
+  padding-top: 29px;
+}
+.flight .flight_Search .search_options .same_options {
+  margin-right: 40px;
+}
+.flight .flight_Search .search_options .same_options input[type="text"] {
+  border-radius: 5px;
+  border: none;
+  padding: 7px 13px;
+}
+.flight .flight_Search .search_options .same_options label {
+  color: #8d9092;
+}
+.flight .flight_Search .flight_btn {
+  text-align: center;
+}
+.flight .flight_Search .flight_btn button {
+  width: 187px;
+  height: 58px;
+  font-size: 36px;
+  border-radius: 5px;
+  background-color: #00cee7;
+  border: none;
+  color: #e3e3e3;
+  transition: all ease 0.5s;
+}
+.flight .flight_Search .flight_btn button:hover {
+  background-color: white;
+}
+.flight .flight_Search .flight_last_heading {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.owl-carousel .owl-nav .owl-next {
+  font-size: 40px !important;
+  position: absolute;
+  top: 50%;
+  right: -33px;
+}
+
+.owl-carousel .owl-nav .owl-prev {
+  font-size: 40px !important;
+  position: absolute;
+  top: 50%;
+  left: -33px;
+}
+
+.owl-carousel .owl-nav.disabled {
+  display: block !important;
+}
+
+.tickets {
+  background-color: #dcdcdc;
+  padding-bottom: 50px;
+}
+.tickets .tickets_text {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+.tickets .tickets_text h2 {
+  font-size: 36px;
+  font-weight: bold;
+}
+.tickets .slider_Section .items .items_img img {
+  width: 100%;
+}
+.tickets .slider_Section .items .items_text {
+  background-color: white;
+  padding: 13px 19px 60px 19px;
+}
+.tickets .slider_Section .items .items_text .text1 {
+  padding-top: 13px;
+}
+.tickets .slider_Section .items .items_text .text1 h3 {
+  font-size: 24px;
+}
+.tickets .slider_Section .items .items_text .text1 p {
+  font-size: 20px;
+}
+.tickets .slider_Section .items .items_text .text2 h4 {
+  font-size: 22px;
+}
+.tickets .slider_Section .items .items_text .text2 p {
+  padding-top: 10px;
+  padding-bottom: 47px;
+  font-size: 16px;
+}
+.tickets .slider_Section .items .items_text .items_btn {
+  text-align: center;
+}
+.tickets .slider_Section .items .items_text .items_btn button {
+  color: white;
+  background-color: #000000;
+  font-size: 36px;
+  font-weight: bold;
+  padding: 11px 39px;
+}
+
+.destination {
+  background-image: url("../images/home/sl_-1.webp");
+  background-position: center;
+  background-size: cover;
+}
+.destination .dest_text {
+  padding-top: 40px;
+  padding-bottom: 48px;
+  color: white;
+}
+.destination .dest_text h4 {
+  padding-bottom: 20px;
+  font-size: 36px;
+}
+.destination .dest_text p {
+  font-size: 22px;
+}
+.destination .card {
+  text-align: center;
+  line-height: 40px;
+}
+.destination .card .card-img-top {
+  max-width: 500px;
+}
+.destination .card .card-img-top img {
+  width: 100%;
+}
+.destination .card .card-body p {
+  color: #8d9092;
+}
+.destination .card .card-body a {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  width: 90px;
+  padding: 5px 10px;
+}
+.destination .dest_right_img {
+  padding-top: 320px;
+}
+.destination .dest_right_img img {
+  width: 100%;
+}
+
+.choose_us {
+  background-image: url("../images/home/sl_-1.webp");
+  background-position: center;
+  background-size: cover;
+  padding-top: 164px;
+  padding-bottom: 199px;
+}
+.choose_us .card {
+  text-align: center;
+}
+.choose_us .card .card-body {
+  text-overflow: ellipsis;
+}
+
+.card-body {
+  padding: 77px 30px;
+}
+
+.you_know {
+  background-color: #dcdcdc;
+  text-align: center;
+  padding: 56px 0;
+}
+.you_know h4 {
+  font-size: 36px;
+  line-height: 55px;
+  color: #000000;
+  font-weight: bold;
+}
+.you_know p {
+  color: #8d9092;
+}
+
+footer {
+  background-color: #000000;
+}
+footer .footer_container {
+  max-width: 1700px;
+  margin: 0 auto;
+}
+footer .footer_container .navbar_image {
+  max-width: 120px;
+}
+footer .footer_container .navbar_image img {
+  width: 100%;
+}
+footer .footer_container ul {
+  color: white;
+}
+footer .footer_container ul li {
+  padding-top: 20px;
+}
+
+@media (max-width: 1490px) {
+  .navbar {
+    padding: 0 40px;
+  }
+
+  .tickets .slider_Section .items .items_text .text1 h3 {
+    font-size: 18px;
+  }
+
+  .tickets .slider_Section .items .items_text .text1 p {
+    font-size: 15px;
+  }
+
+  .tickets .slider_Section .items .items_text .text2 h4 {
+    font-size: 16px;
+  }
+
+  .tickets .slider_Section .items .items_text .items_btn button {
+    font-size: 26px;
+    padding: 6px 30px;
+  }
+
+  .footer_container {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 1300px) {
+  .flight .flight_Search {
+    border-radius: unset;
+  }
+
+  .destination .dest_text p {
+    font-size: 20px;
+  }
+
+  .flight .flight_Search .search_options .same_options input[type="text"] {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .card-body {
+    padding: 50px 20px;
+  }
+}
+@media (max-width: 1240px) {
+  .choose_us .card-body h4 {
+    min-height: 61px;
+  }
+}
+@media (max-width: 1024px) {
+  .choose_us .card {
+    margin-bottom: 10px;
+  }
+
+  .destination .dest_text p {
+    font-size: 20px;
+  }
+
+  .destination .card .card-img-top {
+    max-width: 100% !important;
+  }
+
+  .destination .dest_right_img {
+    padding-top: 358px;
+  }
+}
+@media (max-width: 991px) {
+  .navbar-toggler:focus {
+    outline: 0;
+  }
+
+  .flight .flight_Search .search_options .same_options input[type="text"] {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .flight .flight_Search .search_options .same_options {
+    margin-right: 15px;
+  }
+
+  .navbar .navbar-collapse {
+    max-width: unset;
+    margin-left: auto;
+  }
+
+  nav .navbar-collapse ul {
+    text-align: center;
+  }
+
+  nav .navbar-collapse ul a {
+    font-size: 24px;
+  }
+
+  .banner .banner_text h1 {
+    font-size: 30px;
+  }
+
+  .banner .banner_text h1 span {
+    font-size: 65px;
+  }
+
+  .banner .banner_text button {
+    width: 138px;
+    height: 45px;
+    font-size: 25px;
+  }
+
+  .flight .flight_Search .flight_btn button {
+    width: 138px;
+    height: 45px;
+    font-size: 25px;
+  }
+
+  .text1 h3 {
+    font-size: 25px;
+  }
+
+  .text2 h4 {
+    font-size: 21px;
+  }
+}
+@media (max-width: 820px) {
+  .text1 h3 {
+    font-size: 20px;
+  }
+
+  .dest_right_img {
+    max-width: 520px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar .navbar-collapse li {
+    margin-left: unset;
+  }
+
+  .banner .banner_text {
+    padding-top: 300px;
+  }
+
+  .banner .banner_text h1 span {
+    font-size: 55px;
+  }
+
+  .flight .flight_Search .search_options .same_options h4 {
+    font-size: 22px;
+  }
+
+  .flight .flight_Search {
+    text-align: center;
+    width: 100%;
+    max-width: unset;
+  }
+
+  .tickets .tickets_text h2 {
+    font-size: 30px;
+  }
+
+  .tickets .slider_Section .items .items_text {
+    padding: 10px;
+  }
+
+  .flight .flight_Search .flight_buttons button {
+    margin-right: 5px;
+  }
+
+  .flight .flight_Search .search_options .same_options {
+    padding-top: 13px;
+  }
+
+  .flight .flight_Search .search_options .same_options input[type="text"] {
+    max-width: 300px;
+  }
+
+  .flight .flight_Search .search_options {
+    flex-direction: column;
+  }
+
+  .hotel1 .slider_Section .items .items_text .items_btn button {
+    font-size: 18px;
+  }
+
+  .destination .dest_text h4 {
+    font-size: 30px;
+  }
+
+  .destination .dest_text p {
+    font-size: 17px;
+  }
+
+  .destination .dest_right_img {
+    padding: unset;
+    margin: 0 auto;
+  }
+
+  .destination .card {
+    margin-bottom: 20px;
+  }
+
+  .you_know h4 {
+    font-size: 30px;
+  }
+
+  button.owl-prev {
+    display: none;
+  }
+
+  button.owl-next {
+    display: none;
+  }
+
+  footer .footer_container {
+    flex-direction: column;
+  }
+
+  footer .navbar_image {
+    margin: 0 auto;
+  }
+
+  .right_sec {
+    text-align: center;
+  }
+
+  .right_sec ul {
+    flex-direction: column;
+  }
+}
+@media (max-width: 640px) {
+  .text2 h4 {
+    font-size: 13px;
+  }
+
+  ul.d-flex {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 430px) {
+  .navbar {
+    padding: 0 10px;
+  }
+
+  .banner .banner_text h1 {
+    font-size: 20px;
+  }
+
+  .banner .banner_text h1 span {
+    font-size: 44px;
+  }
+
+  .banner .banner_text button {
+    margin-bottom: 10px;
+  }
+
+  .flight .flight_Search .flight_buttons button {
+    margin-bottom: 10px;
+  }
+}
+.adventure {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/tour/adrian-valverde-pm6ok0pnPkg-unsplash.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 266px;
+  padding-bottom: 422px;
+  background-image: url("../images/tour/adrian-valverde-pm6ok0pnPkg-unsplash.png");
+}
+.adventure .adven-text {
+  text-align: center;
+  color: white;
+}
+.adventure .adven-text h3 {
+  font-size: 72px;
+  font-weight: bold;
+  padding-bottom: 18px;
+}
+.adventure .adven-text p {
+  font-size: 36px;
+  font-weight: bold;
+  padding-bottom: 41px;
+}
+.adventure .main_bg {
+  justify-content: center;
+  align-items: center;
+  background-color: #62633f;
+  border-radius: 22px;
+  padding: 27px 32px;
+  margin-top: 23px;
+}
+.adventure .main_bg .one {
+  padding: 0 20px;
+}
+.adventure .main_bg input {
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+}
+.adventure .main_bg select {
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+}
+.adventure .main_bg button {
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  color: white;
+  background-color: #00daed;
+  border-radius: 10px;
+  outline: 0;
+}
+
+.hotel1 {
+  padding-bottom: 50px;
+}
+.hotel1 .hotel1_text {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+.hotel1 .slider_Section .owl-carousel .items .tour_text {
+  background-color: white;
+  padding: 13px 19px 30px 19px;
+  text-align: center;
+  background-color: #fff0e7;
+}
+.hotel1 .slider_Section .owl-carousel .items .tour_text .text1 {
+  padding-top: 14px;
+}
+.hotel1 .slider_Section .owl-carousel .items .items_btn {
+  padding-bottom: 34px;
+  padding-top: 10px;
+}
+.hotel1 .slider_Section .owl-carousel .items .items_btn button {
+  width: 90px;
+  height: 28px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  border: none;
+}
+
+/* .destination {
+  background-image: url("../images/tour/Mask Group 1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+.destination .travel_heading {
+  text-align: center;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  color: white;
+}
+.destination .mg {
+  padding-bottom: 100px;
+}
+.destination .dest_img img {
+  width: 100%;
+}
+.destination .text_dest {
+  background-color: white;
+  padding: 12px 8px;
+}
+.destination .text_dest h2 {
+  color: black;
+  font-size: 36px;
+  line-height: 48px;
+}
+.destination .text_dest p {
+  color: #8d9092;
+}
+.destination .feilds {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column !important;
+}
+.destination .feilds input {
+  padding: 12px 25px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  border: none;
+  width: 360px;
+}
+.destination .feilds button {
+  padding: 13px 81px;
+  border-radius: 8px;
+  font-size: 18px;
+  color: white;
+  background-color: #00daed;
+  border: none;
+  outline: 0;
+}
+
+@media (max-width: 1300px) {
+  .adventure .main_bg {
+    margin: 0 auto;
+    max-width: 800px;
+    display: block !important;
+  }
+
+  .adventure .main_bg input {
+    width: 100%;
+  }
+
+  .adventure .main_bg select {
+    width: 100%;
+  }
+
+  .adventure .main_bg .one.search_btn {
+    text-align: center;
+  }
+
+  .adventure .main_bg .one {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 1024px) {
+  .adventure .main_bg {
+    margin: 0 auto;
+    max-width: 700px;
+  }
+
+  .adventure {
+    padding-bottom: 150px;
+  }
+
+  .adventure .main_bg input {
+    width: 100%;
+  }
+
+  .adventure .main_bg select {
+    width: 100%;
+  }
+
+  .adventure .main_bg .one.search_btn {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .adventure .adven-text h3 {
+    font-size: 60px;
+  }
+
+  .adventure .adven-text p {
+    font-size: 25px;
+  }
+
+  .destination .text_dest {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .destination .dest_text2 h3 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 440px) {
+  .adventure {
+    padding-top: 130px;
+  }
+
+  .adventure .adven-text h3 {
+    font-size: 30px;
+  }
+
+  .adventure .adven-text p {
+    font-size: 20px;
+  }
+
+  .feilds input[type="text"] {
+    width: 234px !important;
+  }
+
+  .main_bg .f_input input {
+    padding: 12px 10px !important;
+  }
+
+  .adventure .main_bg .one {
+    padding: 0 0;
+  }
+
+  .hotel1 .multiple_items .items .items_text {
+    padding: 0px 0px;
+  }
+
+  .adventure .main_bg button {
+    padding: 6px 10px;
+    font-size: 17px;
+  }
+
+  .destination .dest_text2 h3 {
+    font-size: 25px;
+  }
+
+  .text2 h4 {
+    font-size: 16px;
+  }
+
+  .hotel1 .multiple_items .items .items_text .items_btn {
+    text-align: unset;
+  }
+
+  .hotel1 .multiple_items .items .items_img {
+    width: 270px;
+  }
+
+  .hotel1 .slider_Section .multiple_items .items .tour_text {
+    width: 270px;
+  }
+
+  .hotel1 .hotel1_text {
+    text-align: center;
+  }
+}
+.adventure1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/hotel/damiano-baschiera-hFXZ5cNfkOk-unsplash.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 266px;
+  padding-bottom: 422px;
+}
+.adventure1 .adven-text {
+  text-align: center;
+  color: white;
+}
+.adventure1 .adven-text h3 {
+  font-size: 72px;
+  font-weight: bold;
+  padding-bottom: 18px;
+}
+.adventure1 .adven-text p {
+  font-size: 36px;
+  font-weight: bold;
+  padding-bottom: 41px;
+}
+.adventure1 .main_bg {
+  justify-content: center;
+  align-items: center;
+  background-color: #62633f;
+  border-radius: 22px;
+  padding: 27px 32px;
+  margin-top: 23px;
+}
+.adventure1 .main_bg .one {
+  padding: 0 20px;
+}
+.adventure1 .main_bg input {
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+}
+.adventure1 .main_bg select {
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+}
+.adventure1 .main_bg button {
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  color: white;
+  background-color: #00daed;
+  border-radius: 10px;
+}
+
+.hotel2 {
+  background-color: #dcdcdc;
+  padding-bottom: 50px;
+}
+.hotel2 .tickets_text {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+.hotel2 .tickets_text h2 {
+  font-size: 36px;
+  font-weight: bold;
+}
+.hotel2 .slider_Section .items .items_img img {
+  width: 100%;
+}
+.hotel2 .slider_Section .items .items_text {
+  background-color: white;
+  padding: 13px 19px 60px 19px;
+}
+.hotel2 .slider_Section .items .items_text .text1 {
+  padding-top: 13px;
+}
+.hotel2 .slider_Section .items .items_text .text1 h3 {
+  font-size: 24px;
+}
+.hotel2 .slider_Section .items .items_text .text1 p {
+  font-size: 20px;
+}
+.hotel2 .slider_Section .items .items_text .text2 h4 {
+  font-size: 22px;
+}
+.hotel2 .slider_Section .items .items_text .text2 p {
+  padding-top: 10px;
+  padding-bottom: 47px;
+  font-size: 16px;
+}
+.hotel2 .slider_Section .items .items_text .items_btn {
+  text-align: center;
+}
+.hotel2 .slider_Section .items .items_text .items_btn button {
+  color: white;
+  background-color: #000000;
+  font-size: 36px;
+  font-weight: bold;
+  padding: 11px 39px;
+}
+
+.destination1 {
+  background-image: url("../images/hotel/Mask Group 1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 98px 112px;
+}
+.destination1 .dest_text2 {
+  text-align: center;
+}
+.destination1 .dest_text2 h3 {
+  font-size: 52px;
+  font-weight: bold;
+  padding-bottom: 13px;
+}
+.destination1 .feilds {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column !important;
+}
+.destination1 .feilds input {
+  padding: 12px 25px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  border: none;
+  width: 360px;
+}
+.destination1 .feilds button {
+  padding: 13px 81px;
+  border-radius: 8px;
+  font-size: 18px;
+  color: white;
+  background-color: #00daed;
+  border: none;
+}
+
+@media (max-width: 1300px) {
+  .adventure1 .main_bg {
+    margin: 0 auto;
+    max-width: 800px;
+    display: block !important;
+  }
+
+  .adventure1 .main_bg input {
+    width: 100%;
+  }
+
+  .adventure1 .main_bg select {
+    width: 100%;
+  }
+
+  .adventure1 .main_bg .one.search_btn {
+    text-align: center;
+  }
+
+  .adventure1 .main_bg .one {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 1024px) {
+  .adventure1 .main_bg {
+    margin: 0 auto;
+    max-width: 700px;
+  }
+
+  .adventure1 {
+    padding-bottom: 150px;
+  }
+
+  .adventure1 .main_bg input {
+    width: 100%;
+  }
+
+  .adventure1 .main_bg select {
+    width: 100%;
+  }
+
+  .adventure1 .main_bg .one.search_btn {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .destination1 .feilds button {
+    padding: 9px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  .adventure1 .adven-text h3 {
+    font-size: 60px;
+  }
+
+  .adventure1 .adven-text p {
+    font-size: 25px;
+  }
+
+  .destination1 .dest_text2 h3 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 440px) {
+  .adventure1 {
+    padding-top: 130px;
+  }
+
+  .adventure1 .adven-text h3 {
+    font-size: 40px;
+  }
+
+  .adventure1 .adven-text p {
+    font-size: 26px;
+  }
+
+  .feilds input[type="text"] {
+    width: 234px !important;
+  }
+
+  .main_bg .f_input input {
+    padding: 12px 10px !important;
+  }
+
+  .adventure1 .main_bg .one {
+    padding: 0 0;
+  }
+
+  .hotel2 .multiple_items .items .items_text {
+    padding: 0px 0px;
+  }
+
+  .destination1 .dest_text2 h3 {
+    font-size: 25px;
+  }
+
+  .text2 h4 {
+    font-size: 16px;
+  }
+
+  .destination1 .feilds input {
+    font-size: 15px;
+  }
+}
+@media (max-width: 375px) {
+  .destination1 {
+    padding: 50px 40px;
+  }
+
+  .destination1 .feilds button {
+    padding: 10px 7px;
+  }
+
+  .destination1 .feilds button {
+    font-size: 15px;
+  }
+}
+.booking_section {
+  background-image: url(../images/booking/booking.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 42;
+  padding-top: 409px;
+  padding-bottom: 337px;
+}
+.booking_section .booking_text {
+  text-align: center;
+}
+.booking_section .booking_text h4 {
+  font-family: Hollanda;
+  font-size: 186px;
+  color: white;
+}
+
+.contact {
+  background-color: #9a9a9a;
+  margin: 50px;
+  border-radius: 30px;
+}
+.contact .extra textarea {
+  width: 100%;
+  max-width: 1538px;
+  height: 357px;
+  border: 1px solid black;
+  padding: unset;
+}
+.contact .extra p {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: roboto;
+  padding-bottom: 10px;
+}
+
+.row {
+  width: 100%;
+  max-width: 1538px;
+}
+
+.contact_form .row .col-lg-3 {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.contact_form .row .col-lg-3 input {
+  max-width: 344px;
+  width: 100%;
+  height: 42px;
+  border: 1px solid black;
+}
+.contact_form .row .col-lg-3 p {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: roboto;
+  padding-bottom: 10px;
+}
+
+.contact_button {
+  text-align: center;
+  padding-top: 73px;
+  padding-bottom: 77px;
+}
+.contact_button button {
+  background-color: #00bddf;
+  color: white;
+  padding: 7px 29px;
+  border: none;
+  border-radius: 7px;
+  margin-right: 10px;
+}
+
+@media (max-width: 992px) {
+  .contact_form {
+    text-align: center;
+  }
+
+  .contact_button {
+    padding-top: 29px;
+    padding-bottom: 40px;
+  }
+
+  .contact .extra textarea {
+    max-width: 752px;
+    height: 301px;
+  }
+}
+@media (max-width: 768px) {
+  .booking_section .booking_text h4 {
+    font-size: 105px;
+  }
+
+  .contact_form .row .col-lg-3 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .booking_section .booking_text h4 {
+    font-size: 68px;
+  }
+
+  .contact {
+    margin: unset;
+    border-radius: unset;
+  }
+
+  .contact_form .row .col-lg-3 {
+    margin-top: 10px;
+  }
+
+  .contact_button button {
+    margin-bottom: 10px;
+  }
+}
+.about {
+  background-image: url("../images/about/pietro-de-grandi-T7K4aEPoGGk-unsplash.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about .about_text {
+  text-align: center;
+  padding: 364px 0;
+  color: white;
+}
+.about .about_text h2 {
+  font-size: 131px;
+}
+.about .about_text p {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.story .top_text {
+  padding-top: 30px;
+}
+.story .top_text h3 {
+  font-size: 36px;
+}
+.story .top_text p {
+  color: #8d9092;
+  font-size: 18px;
+}
+.story .story_img {
+  max-width: 500px;
+  padding-top: 39px;
+}
+.story .story_img img {
+  width: 100%;
+}
+.story .story_numb {
+  text-align: center;
+  padding-top: 68px;
+}
+.story .story_numb h3 {
+  font-size: 121px;
+  color: #00daed;
+  font-weight: 100;
+}
+.story .story_numb p {
+  font-size: 18px;
+  color: #8d9092;
+}
+
+.trip .trip_heading {
+  padding-top: 40px;
+  padding-bottom: 28px;
+}
+.trip .trip_heading h3 {
+  font-size: 36px;
+}
+.trip .trip_img {
+  margin-bottom: 25px;
+}
+.trip .trip_img img {
+  width: 100%;
+}
+
+.feature {
+  padding-top: 66px;
+  padding-bottom: 60px;
+}
+.feature .feature_Sec {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 27px 25px;
+}
+.feature .feature_Sec .fet_img {
+  max-width: 100px;
+  min-height: 150px;
+}
+.feature .feature_Sec .fet_img img {
+  width: 100%;
+}
+
+.carosel {
+  padding-bottom: 30px;
+}
+.carosel .carosel_img img {
+  text-align: center;
+  margin: 0 auto;
+}
+.carosel .carosel_img .carosel_text h4 {
+  font-size: 44px;
+  font-weight: 700;
+  font-family: Poppins;
+  text-align: center;
+}
+.carosel .carosel_img .carosel_text p {
+  font-size: 40px;
+  font-family: Poppins;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .about .about_text h2 {
+    font-size: 78px;
+  }
+
+  .about .about_text p {
+    font-size: 25px;
+  }
+
+  .story .story_numb h3 {
+    font-size: 70px;
+  }
+
+  .carosel .carosel_img .carosel_text h4 {
+    font-size: 35px;
+  }
+
+  .carosel .carosel_img .carosel_text p {
+    font-size: 28px;
+  }
+}
+@media (max-width: 375px) {
+  .about .about_text h2 {
+    font-size: 63px;
+  }
+
+  .about .about_text p {
+    font-size: 20px;
+  }
+
+  .carosel .carosel_img .carosel_text h4 {
+    font-size: 29px;
+  }
+
+  .carosel .carosel_img .carosel_text p {
+    font-size: 20px;
+  }
+}
+.blog_banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/blog/frank-mckenna-OD9EOzfSOh0-unsplash.png");
+  padding-top: 424px;
+  padding-bottom: 327px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.blog_banner h2 {
+  font-size: 186px;
+  font-weight: 100;
+  color: white;
+}
+
+.bottom_all {
+  padding-top: 73px;
+  background-color: #f1f1f1;
+}
+.bottom_all .left {
+  margin-right: 59px;
+}
+.bottom_all .left .b_search {
+  padding: 18px 22px;
+  background-color: #d5d5d5;
+  margin-bottom: 56px;
+}
+.bottom_all .left .b_search input {
+  padding: 5px 13px;
+  margin-right: 23px;
+  border-radius: 9px;
+}
+.bottom_all .left .b_search button {
+  background-color: #00bddf;
+  color: black;
+  border: none;
+  padding: 5px 5px;
+  border-radius: 5px;
+}
+.bottom_all .left .b_recent {
+  margin-bottom: 46px;
+  background-color: white;
+}
+.bottom_all .left .b_recent .rexent_head {
+  background-color: #d5d5d5;
+  padding: 17px 0;
+  text-align: center;
+}
+.bottom_all .left .b_recent .rexent_head h3 {
+  font-size: 36px;
+  color: black;
+}
+.bottom_all .left .b_recent .para {
+  padding: 22px 28px;
+}
+.bottom_all .mid .b_recent {
+  width: 418px;
+  background-color: white;
+  margin-bottom: 56px;
+}
+.bottom_all .mid .para {
+  padding-top: 15px;
+  padding-left: 29px;
+  padding-bottom: 55px;
+}
+
+@media (max-width: 1440px) {
+  .bottom_all .left .b_search {
+    padding: 10px 10px;
+  }
+
+  .bottom_all .left .b_search input {
+    padding: 5px 10px;
+    margin-right: 20px;
+  }
+
+  .bottom_all .left .b_search {
+    text-align: center;
+  }
+
+  .bottom_all .mid .b_recent {
+    width: unset;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  .bottom_all .left .b_search button {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 1024px) {
+  .bottom_all .left {
+    margin-right: unset;
+  }
+}
+@media (max-width: 440px) {
+  .blog_banner h2 {
+    font-size: 70px;
+  }
+
+  .bottom_all .left .b_search {
+    text-align: center;
+    width: 289px;
+  }
+
+  .bottom_all .mid .b_recent {
+    width: unset;
+  }
+
+  .bottom_all .mid .para {
+    text-align: center;
+    padding: 5px 10px !important;
+  }
+}
+@media (max-width: 375px) {
+  .bottom_all .mid .para {
+    padding-left: unset;
+    text-align: center;
+  }
+
+  .bottom_all .left .b_search {
+    width: unset;
+  }
+} /*# sourceMappingURL=main.css.map */

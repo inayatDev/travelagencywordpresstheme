@@ -88,7 +88,7 @@
                      ?>
                     <div class="items">
                         <div class="items_img">
-                          <?php the_post_thumbnail( 'thumbnail' ,array('class' => 'img-fluid')); ?> 
+                          <?php the_post_thumbnail( 'full' ,array('class' => 'img-fluid')); ?> 
                         </div>
                         <div class="items_text">
                             <div class="text1 d-flex justify-content-between">
@@ -179,7 +179,6 @@
             </div>
             <div class="slider_Section">
                 <div class="owl-carousel">
-
                     <?php 
                             $args = array(  
                     'post_type' => 'hotel',
@@ -188,15 +187,13 @@
                     'orderby' => 'title', 
                     'order' => 'ASC', 
                 );
-
                 $loop = new WP_Query( $args ); 
                     
                 while ( $loop->have_posts() ) : $loop->the_post(); 
                     ?>
-
                     <div class="items">
                         <div class="items_img">
-                             <?php the_post_thumbnail( 'thumbnail' ,array('class' => 'img-fluid')); ?> 
+                             <?php the_post_thumbnail( 'full' ,array('class' => 'img-fluid')); ?> 
                           <!--   <img src="" alt="img" class="img-fluid"> -->
                         </div>
                         <div class="items_text">
@@ -221,10 +218,8 @@
                 </div>
             </div>
         </div>
-
     </section>
     <!-- Hotel Section End -->
-
     <!-- choose us section start -->
     <section class="choose_us">
         <div class="container-fluid">
