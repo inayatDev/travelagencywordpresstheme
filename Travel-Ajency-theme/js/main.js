@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  console.log("jquery is working OK!");
   $(".multiple_items").slick({
     slidesToShow: 3,
     slidesToScroll: 1,

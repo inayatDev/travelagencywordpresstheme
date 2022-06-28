@@ -88,11 +88,11 @@ function create_trippackage_cpt() {
 }
 add_action( 'init', 'create_trippackage_cpt', 0 );
 
-function add_theme_menu_item()
-{
-        add_menu_page("Theme Setting", "Theme Setting", "manage_options", "theme-panel", "theme_settings_page", null, 99);
-}
-add_action("admin_menu", "add_theme_menu_item");
+// function add_theme_menu_item()
+// {
+//         add_menu_page("Theme Setting", "Theme Setting", "manage_options", "theme-panel", "theme_settings_page", null, 99);
+ //}
+//add_action("admin_menu", "add_theme_menu_item");
 function theme_settings_page()
 {
     ?>
@@ -110,22 +110,22 @@ function theme_settings_page()
 }
 function display_website_title()
 {  ?>
-        <input type="text" name="website_title" id="website_title" value="<?php echo get_option('website_title'); ?>" />
+        <input type="text" name="website_title" id="website_title" style = "width :700px" value="<?php echo get_option('website_title'); ?>" />
     <?php
 }
 function display_slogan_element()
 {  ?>
-        <input type="text" name="website_slogan" id="website_slogan" value="<?php echo get_option('website_slogan'); ?>" />
+        <input type="text" name="website_slogan" id="website_slogan" style = "width :700px" value="<?php echo get_option('website_slogan'); ?>" />
     <?php
 }
 function destination()
 { ?>
-        <input type="text" name="destination" id="destination" value="<?php echo get_option('destination'); ?>" />
+        <input type="text" name="destination" id="destination" style = "width :700px" value="<?php echo get_option('destination'); ?>" />
     <?php
 }
 function destination_description()
 {  ?>
-     <textarea name="destination_description" id="destination_description" rows="4" cols="50"><?php echo get_option('destination_description'); ?></textarea>
+     <textarea name="destination_description" id="destination_description" style = "width :700px" rows="4" cols="50"><?php echo get_option('destination_description'); ?></textarea>
     <?php
 }
 function display_theme_panel_fields()
@@ -143,7 +143,7 @@ function display_theme_panel_fields()
 add_action("admin_init", "display_theme_panel_fields");
 function logo_display()
 { ?>   
-        <input type="file" name="logo"/> 
+        <input type="file" style="color:transparent" name="logo"/> 
         <img src= <?php echo get_option('logo'); ?>
    <?php
 }
@@ -282,7 +282,7 @@ dbDelta( $sql );
         $adults = $_POST['adults'];
         $children = $_POST['children'];
         $subject  = $_POST['subject'];
-        if($email == ' ' || $name == ' ' ||  $lname = ' ' ){
+        if($email == ' ' || $name == ' ' ||  $lname == ' ' ){
             echo '<script>alert("please insert the values")</script>';
         }
         else{
@@ -307,3 +307,72 @@ else {
 
  }
  add_action('init' , 'insert_in_db_booking');
+
+ function add_theme_menu_item_new_1()
+{
+        add_menu_page("Travel Agency", "Travel Agency", "manage_options", "theme-page", "theme_settings_page_new_1","dashicons-airplane
+", null, 99);
+}
+add_action("admin_menu", "add_theme_menu_item_new_1");
+function theme_settings_page_new_1(){
+ ?>
+ <div class = "wrap">
+    <h2>All Settings</h2>
+</div>
+<?php
+}
+
+function setting_page_travel_agency() {
+  add_submenu_page('theme-page','Settings', 'Settings', 'manage_options', 'theme-panel', 'theme_settings_page'); 
+
+}
+add_action('admin_menu', 'setting_page_travel_agency');
+
+function setting_page_select_bookings() {
+  add_menu_page('Bookings', 'Bookings', 'manage_options', 'theme-booking', 'booking_cal_back'); 
+
+}
+add_action('admin_menu', 'setting_page_select_bookings');
+function booking_cal_back(){
+    ?>
+    <div class = "wrap">
+        <h3>All Booking Recieved</h3>
+    <table style = "border: 1px solid black; width:600px" >
+        <tr style = "border: 1px solid black;">
+            <td style = "border: 1px solid black;">S.No</td>
+            <td style = "border: 1px solid black;">Email </td>
+            <td style = "border: 1px solid black;">Name</td>
+            <td style = "border: 1px solid black;">Arival Date</td>
+            <td style = "border: 1px solid black;">Country</td>
+            <td style = "border: 1px solid black;">Phone</td>
+            <td style = "border: 1px solid black;">Adult</td>
+            <td style = "border: 1px solid black;">Childern</td>
+            <td style = "border: 1px solid black;">Message</td>
+</tr>
+  <?php
+    global $wpdb;
+    $wpdb_prefix = $wpdb->prefix;
+    $result = $wpdb->get_results(sprintf("SELECT email, name FROM  wp_travel_agency_booking"));
+    foreach($result as $res){
+        ?>
+ <tr>
+  
+       <td><?php echo $res->id; ?></td> 
+      <td><?php echo $res->email; ?></td>
+       <td><?php echo $res->name; ?></td>
+        <?php
+    // echo $res->email;
+    }
+     ?>
+</tr>
+</table>
+    </div>
+    <?php
+
+}
+
+// function fetch_booking_db(){
+
+// }
+// }
+// add_action('init' , 'fetch_booking_db');

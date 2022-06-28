@@ -1,34 +1,53 @@
 
 
     <!-- Footer Section Start -->
-    <footer>
+  <footer>
         <div class=" footer_container d-flex justify-content-between">
             <div class="navbar_image">
                 <a class="navbar-brand" href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/home/Untitled-1.webp" alt=""></a>
             </div>
-           <!--  <div class="right_sec">
-                <ul class=" d-flex"> -->
+             <div class="right_sec">
+               <!-- <ul class=" d-flex">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hotels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./blog.html">Blog</a>
+                    </li>
+                </ul>  -->
+            </div>
 
-                     <?php  
+              <?php  
                 wp_nav_menu(array(
                   'theme_location' =>  'footer-menu',
-                  'menu_class' => ' d-flex', 
-                  'add_li_class' => 'right_sec',
-                  "container_class" => 'd-flex', 
-                  "link_class" => "nav-item",
+                  'menu_class' => 'd-flex', 
+                  'add_li_class' => 'nav-item',
+                  "container" => false, 
+                  "link_class" => "nav-link"
                 ));
             ?>
-            </div>
         </div>
     </footer>
-
+   
     <!-- Footer Section end -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 
     <script>
         $('.owl-carousel').owlCarousel({
@@ -76,14 +95,9 @@
                 },
             },
         });
-
-
-
-
-        
     </script>
-
+ <script src="<?php echo get_template_directory_uri();?>/js/main.js"></script>
+ <?php wp_footer()?>
 </body>
 
 </html>
-<?php wp_footer();?>

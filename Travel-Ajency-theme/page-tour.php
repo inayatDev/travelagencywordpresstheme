@@ -36,9 +36,9 @@
     </section>
     <!-- Banner Section End -->
     <!-- Hotel Section Start -->
-    <section class="tickets">
+    <section class="hotel1">
         <div class="col-lg-11 col-md-11 col-12 m-auto">
-            <div class="tickets_text">
+            <div class="hotel1_text">
                 <h2>Popular Trip Packages</h2>
             </div>
             <div class="slider_Section">
@@ -56,7 +56,7 @@
                     ?>
                     <div class="items">
                         <div class="items_img">
-                            <?php the_post_thumbnail('thumbnail' ,array('class' => 'img-fluid')); ?>
+                            <?php the_post_thumbnail('full' ,array('class' => 'img-fluid')); ?>
                         </div>
                         <div class="tour_text">
                             <div class="text1 ">
@@ -66,7 +66,7 @@
                                 <p><?php the_content();?></p>
                             </div>
                             <div class="items_btn">
-                             <a href="<?php the_permalink(); ?>"> <button>See All</button> </a>
+                             <button> <a href="<?php the_permalink(); ?>">See All</a></button> 
                             </div>
                         </div>
                     </div>

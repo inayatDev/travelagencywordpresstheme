@@ -49,5 +49,6 @@
         'show_in_rest' => true,
         'publicly_queryable' => true,
         'capability_type' => 'post',
+        'show_in_menu' => 'theme-page',
     );
     register_post_type( 'hotel', $args );

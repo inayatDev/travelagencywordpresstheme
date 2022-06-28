@@ -144,7 +144,7 @@
                 while ( $loop->have_posts() ) : $loop->the_post(); 
                      ?>
         <div class="carosel_img">
-            <img src="<?php the_post_thumbnail();?>" 
+            <img src=<?php the_post_thumbnail();?>
             <div class="carosel_text">
                 <h4><a href = "<?php the_permalink(); ?>"> <?php the_title(); ?></a></h4>
                 <p><?php the_content();?></p>
@@ -155,7 +155,7 @@
                 wp_reset_postdata(); 
             ?>
 </section>
-
+<?php get_footer();?>
 <!-- carosel section End -->
 
 

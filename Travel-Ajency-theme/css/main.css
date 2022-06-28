@@ -1528,3 +1528,10 @@ footer .footer_container ul li {
     width: unset;
   }
 } /*# sourceMappingURL=main.css.map */
+footer .footer_container ul li {
+  margin-left: 40px;
+  padding-top: 20px;
+}
+footer .footer_container ul li a {
+  color: #fff;
+}

@@ -5,7 +5,7 @@
 ?>
 <?php get_header();?>
     <!-- Banner Section Start -->
-    <section class="banner">
+    <section class="banner" style=" background-image:url(<?php echo get_template_directory_uri(); ?>/images/home/banner.webp)">
         <div class="row">
             <div class="col-lg-10 m-auto">
                 <div class="banner_text">
