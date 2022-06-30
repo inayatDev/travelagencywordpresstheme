@@ -91,7 +91,7 @@
             <div class="row">
                 <div class="col-lg-4  col-md-4 col-12 mg">
                     <div class="dest_img ">
-                        <img src="./images/tour/andrea-davis--Q_BTq5J93w-unsplash.webp" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/tour/andrea-davis--Q_BTq5J93w-unsplash.webp" alt="">
                     </div>
                     <div class="text_dest">
                         <h2>Baggage Info</h2>
@@ -105,7 +105,7 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-12 mg">
                     <div class="dest_img ">
-                        <img src="./images/tour/chuttersnap-qhNutmNU1pE-unsplash.webp" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/tour/chuttersnap-qhNutmNU1pE-unsplash.webp" alt="">
                     </div>
                     <div class="text_dest">
                         <h2>Baggage Info</h2>
@@ -119,7 +119,7 @@
                 </div>
                 <div class="col-lg-4 col-md-4  col-12 mg">
                     <div class="dest_img ">
-                        <img src="./images/tour/mark-stosberg-3eOIKv495OU-unsplash.webp" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/tour/mark-stosberg-3eOIKv495OU-unsplash.webp" alt="">
                     </div>
                     <div class="text_dest">
                         <h2>Baggage Info</h2>

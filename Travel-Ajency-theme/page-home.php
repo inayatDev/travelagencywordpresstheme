@@ -5,66 +5,20 @@
 ?>
 <?php get_header();?>
     <!-- Banner Section Start -->
-    <section class="banner" style=" background-image:url(<?php echo get_template_directory_uri(); ?>/images/home/banner.webp)">
+    <?php  $image = get_post_meta($post->ID, 'aw_custom_image', true); ?>
+    <section class="banner" style=" background-image:url(<?php echo $image ; ?>">
         <div class="row">
             <div class="col-lg-10 m-auto">
                 <div class="banner_text">
                     <h1><?php echo get_option('website_slogan'); ?><br>
                         <span><?php echo get_option('website_title'); ?></span>
                     </h1>
-                    <button>Buy Now</button>
-                    <a href="<?php the_permalink(); ?>"> <button>More Info</button> </a>
+                    <a href="<?php echo get_template_directory_uri(); ?>/about"> <button>More Info</button> </a>
                 </div>
             </div>
         </div>
     </section>
     <!-- Banner Section End -->
-    <!-- Flight Section Start -->
-    <section class="flight">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="flight_Search">
-                    <h2>Flight</h2>
-                    <div class="flight_buttons">
-                        <button class="one">One Way</button>
-                        <button>Round Trip</button>
-                        <button>Multi City</button>
-                    </div>
-                    <div class="search_options">
-                        <div class="same_options">
-                            <h4>From</h4>
-                            <input type="text" placeholder="Enter Your Locaton"><br>
-                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                            <label for="vehicle1"> Direct Flight Only</label>
-                        </div>
-                        <div class="same_options">
-                            <h4>To</h4>
-                            <input type="text" placeholder="Enter Your Locaton">
-                        </div>
-                        <div class="same_options">
-                            <h4>Check In</h4>
-                            <input type="text" placeholder="Select Your Date">
-                        </div>
-                        <div class="same_options">
-                            <h4>Guest</h4>
-                            <input type="text" placeholder="Select Your Date">
-                        </div>
-                        <div class="same_options">
-                            <h4>Cabin Type</h4>
-                            <input type="text" placeholder="Select Your Date">
-                        </div>
-
-                    </div>
-                    <div class="flight_btn">
-                        <button>Search</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FLight Section End -->
-
     <!-- tickets Section Start -->
     <section class="tickets">
         <div class="col-lg-10 col-md-11 col-11 m-auto">
@@ -92,7 +46,7 @@
                         </div>
                         <div class="items_text">
                             <div class="text1 d-flex justify-content-between">
-                                <h3> <a href="<?php the_permalink(); ?>"> <?php print the_title(); ?></a></h3>
+                                <h3> <?php print the_title(); ?></h3>
                                 <p>DIRECT FLIGHT</p>
                             </div>
                             <div class="text2">
@@ -100,7 +54,7 @@
                                 <p>25 Dec (30 min)</p>
                             </div>
                             <div class="items_btn">
-                                <a href="<?php the_permalink(); ?>"> <button>More Info</button> </a>
+                                <a href="<?php echo get_template_directory_uri(); ?>/booking"> <button>Book Now</button> </a>
                             </div>
                         </div>
                     </div>
@@ -147,7 +101,7 @@
                                 <div class="card-body">
                                     <h4><?php print the_title(); ?></h4>
                                     <p><?php the_content()?></p>
-                                    <a href="<?php the_permalink();?>">See Profile</a>
+                                    <a href="<?php echo get_template_directory_uri(); ?>/tour">See Profile</a>
                                 </div>
                             </div>
                         </div>
@@ -205,7 +159,7 @@
                                 <p>25 Dec (30 min)</p>
                             </div>
                             <div class="items_btn">
-                                <a href="<?php the_permalink()?>">
+                                <a href="<?php echo get_template_directory_uri(); ?>/hotels">
                                 <button>Book Now</button>
                                 </a>
                             </div>

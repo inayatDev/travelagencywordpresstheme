@@ -23,7 +23,7 @@ include_once 'inc/flight.php';
 }
 add_action( 'init', 'create_flight_cpt', 0 );
 function global_notice_meta_box() {
-    $screens = array( 'post', 'page', 'flight' );
+    $screens = array( 'post', 'flight' );
     foreach ( $screens as $screen ) {
         add_meta_box(
             'global-notice',
@@ -184,8 +184,9 @@ function create_testimonial_cpt() {
 }
 add_action( 'init', 'create_testimonial_cpt', 0 );
 function header_section(){
+    $image = get_post_meta($post->ID, 'aw_custom_image', true);
     ?>
-   <section class="about">
+   <section class="about" style="background-image: url(<?php echo $image ; ?>)">
         <div class="about_text">
             <h2><?php wp_title(); ?></h2>
             <p>Lorem ipsum dolorabore et dolor rebum. Stet clita kasd guber</p>
@@ -282,7 +283,7 @@ dbDelta( $sql );
         $adults = $_POST['adults'];
         $children = $_POST['children'];
         $subject  = $_POST['subject'];
-        if($email == ' ' || $name == ' ' ||  $lname == ' ' ){
+        if($email == '' || $name == '' ||  $lname == '' ){
             echo '<script>alert("please insert the values")</script>';
         }
         else{
@@ -338,32 +339,31 @@ function booking_cal_back(){
     <div class = "wrap">
         <h3>All Booking Recieved</h3>
     <table style = "border: 1px solid black; width:600px" >
-        <tr style = "border: 1px solid black;">
-            <td style = "border: 1px solid black;">S.No</td>
-            <td style = "border: 1px solid black;">Email </td>
-            <td style = "border: 1px solid black;">Name</td>
-            <td style = "border: 1px solid black;">Arival Date</td>
-            <td style = "border: 1px solid black;">Country</td>
-            <td style = "border: 1px solid black;">Phone</td>
-            <td style = "border: 1px solid black;">Adult</td>
-            <td style = "border: 1px solid black;">Childern</td>
-            <td style = "border: 1px solid black;">Message</td>
+        <tr>
+            <td>S.No</td>
+            <td>Email </td>
+            <td>Name</td>
+            <td>Arival Date</td>
+            <td>Country</td>
+            <td>Phone</td>
+            <td>Adult</td>
+            <td>Childern</td>
+            <td>Message</td>
 </tr>
-  <?php
+    <?php
     global $wpdb;
     $wpdb_prefix = $wpdb->prefix;
     $result = $wpdb->get_results(sprintf("SELECT email, name FROM  wp_travel_agency_booking"));
     foreach($result as $res){
         ?>
- <tr>
-  
+    <tr>
        <td><?php echo $res->id; ?></td> 
       <td><?php echo $res->email; ?></td>
        <td><?php echo $res->name; ?></td>
         <?php
     // echo $res->email;
     }
-     ?>
+    ?>
 </tr>
 </table>
     </div>
@@ -376,3 +376,62 @@ function booking_cal_back(){
 // }
 // }
 // add_action('init' , 'fetch_booking_db');
+
+function custom_search_form( $form, $value = "Search", $post_type = 'post' ) {
+    $form_value = (isset($value)) ? $value : attribute_escape(apply_filters('the_search_query', get_search_query()));
+    $form = '<form method="get" id="searchform" action="' . get_option('home') . '/" >
+    <div>
+        <input type="hidden" name="post_type" value="'.$post_type.'" />
+        <input type="text" value="' . $form_value . '" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="'.attribute_escape(__('Search')).'" />
+    </div>
+    </form>';
+    return $form;
+}
+add_shortcode('search_form_posts' , 'custom_search_form');
+
+
+
+function aw_custom_meta_boxes( $post_type, $post ) {
+    add_meta_box(
+        'aw-meta-box',
+        __( 'Header Image' ),
+        'render_aw_meta_box',
+        array('post', 'page'), //post types here
+        'normal',
+        'high'
+    );
+}
+add_action( 'add_meta_boxes', 'aw_custom_meta_boxes', 10, 2 );
+  
+function render_aw_meta_box($post) {
+    $image = get_post_meta($post->ID, 'aw_custom_image', true);
+    ?>
+    <table>
+        <tr>
+            <td><a href="#" class="aw_upload_image_button button button-secondary"><?php _e('Upload Image'); ?></a></td>
+            <td><input type="text" name="aw_custom_image" id="aw_custom_image" style = "width :550px"  value="<?php echo $image; ?>" /></td>
+        </tr>
+    </table>
+    <?php
+}
+function aw_include_script() {
+  
+    if ( ! did_action( 'wp_enqueue_media' ) ) {
+        wp_enqueue_media();
+    }
+  
+    wp_enqueue_script( 'awscript', get_stylesheet_directory_uri() . '/js/awscript.js', array('jquery'), null, false );
+}
+add_action( 'admin_enqueue_scripts', 'aw_include_script' );
+function aw_save_postdata($post_id)
+{
+    if (array_key_exists('aw_custom_image', $_POST)) {
+        update_post_meta(
+            $post_id,
+            'aw_custom_image',
+            $_POST['aw_custom_image']
+        );
+    }
+}
+add_action('save_post', 'aw_save_postdata');
