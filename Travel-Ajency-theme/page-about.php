@@ -1,5 +1,11 @@
  <?php get_header()?>
- <?php echo do_shortcode('[view_section]'); ?>
+ <?php  $image = get_post_meta($post->ID, 'aw_custom_image', true); ?>
+   <section class="about" style="background-image: url(<?php echo $image ; ?>)">
+        <div class="about_text">
+            <h2><?php wp_title(); ?></h2>
+            <p>Lorem ipsum dolorabore et dolor rebum. Stet clita kasd guber</p>
+        </div>
+    </section>
     <!-- Banner section End -->
 
     <!-- Story section strt -->
