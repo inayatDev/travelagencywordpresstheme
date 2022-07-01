@@ -94,7 +94,15 @@
                     margin: 30,
                 },
             },
+
+            
         });
+        function myFunction() {
+  var hotel_title=document.getElementById("hotel_title").textContent; 
+  var hotel_value=document.getElementById("destination").value = hotel_title;  
+  console.log(hotel_value);
+    }
+
     </script>
  <script src="<?php echo get_template_directory_uri();?>/js/main.js"></script>
  <?php wp_footer()?>

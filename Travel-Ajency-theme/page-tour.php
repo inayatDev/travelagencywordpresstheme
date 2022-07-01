@@ -66,7 +66,7 @@
                                 <p><?php the_content();?></p>
                             </div>
                             <div class="items_btn">
-                             <button> <a href="<?php the_permalink(); ?>">See All</a></button> 
+                             <button> <a href="#">See All</a></button> 
                             </div>
                         </div>
                     </div>

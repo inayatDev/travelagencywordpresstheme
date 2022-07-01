@@ -47,11 +47,12 @@
                         <div class="items_text">
                             <div class="text1 d-flex justify-content-between">
                                 <h3> <?php print the_title(); ?></h3>
-                                <p>DIRECT FLIGHT</p>
+                                <p><?php $value = get_post_meta( $post->ID, '_global_notice', true );
+                                echo $value; ?></p>
                             </div>
                             <div class="text2">
                                 <h4><?php the_content(); ?></h4>
-                                <p>25 Dec (30 min)</p>
+                                <!-- <p>25 Dec (30 min)</p> -->
                             </div>
                             <div class="items_btn">
                                 <a href="<?php echo get_template_directory_uri(); ?>/booking"> <button>Book Now</button> </a>
@@ -70,7 +71,7 @@
     <!-- ticket section end -->
 
     <!-- Destination Section Start -->
-    <section class="destination">
+    <section class="destination" style="<?php echo get_template_directory_uri(); ?>/background-image:url(./images/home/sl_-1.webp)">
         <div class="col-lg-10 col-m-11 m-auto">
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-10 m-auto">

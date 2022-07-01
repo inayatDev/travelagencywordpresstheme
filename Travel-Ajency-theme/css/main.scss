@@ -1163,98 +1163,193 @@ footer {
 
 // Contact Section Start
 
+.booking_section {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 42;
+  padding-top: 409px;
+  padding-bottom: 337px;
+
+  .booking_text {
+    text-align: center;
+
+    h4 {
+      font-family: Hollanda;
+      font-size: 186px;
+
+      color: white;
+    }
+  }
+}
+
+// Contact Section Start
+
 .contact {
-  background-color: #9a9a9a;
+  background-color: black;
   margin: 50px;
   border-radius: 30px;
-  .extra {
-    textarea {
+  border-bottom: 1px solid;
+
+  .top_text {
+    text-align: center;
+    padding: 50px 0;
+    color: white;
+    h5 {
+      font-size: 41px;
+    }
+  }
+  .parent_booking {
+    display: flex;
+    .left_side {
+      width: 50%;
+      max-width: 572px;
+      margin: 0 auto;
+      padding-left: 15px;
+    }
+    .row {
       width: 100%;
       max-width: 1538px;
-      height: 357px;
-      border: 1px solid black;
-      padding: unset;
     }
-    p {
-      font-size: 28px;
-      font-weight: 700;
-      font-family: roboto;
-      padding-bottom: 10px;
-    }
-  }
-}
-.row {
-  width: 100%;
-  max-width: 1538px;
-}
-.contact_form {
-  .row {
-    .col-lg-3 {
-      input {
-        max-width: 344px;
-        width: 100%;
-        height: 42px;
-        border: 1px solid black;
-      }
-      margin-top: 40px;
-      margin-bottom: 30px;
-      width: 100%;
+    .contact_form {
       p {
-        font-size: 28px;
-        font-weight: 700;
-        font-family: roboto;
-        padding-bottom: 10px;
+        color: white;
+      }
+      .row {
+        .col-lg-6 {
+          input {
+            max-width: 229px;
+            width: 100%;
+            height: 42px;
+            border: unset;
+            border-bottom: 1px solid white;
+            background: transparent;
+            padding: 10px;
+            color: white;
+            outline: none;
+          }
+          ::placeholder {
+            color: white;
+          }
+          select {
+            max-width: 229px;
+            width: 100%;
+            padding: 10px;
+            background: transparent;
+            border: unset;
+            color: white;
+            border-bottom: 1px solid white;
+            outline: none;
+          }
+          margin-top: 40px;
+        }
+      }
+    }
+    .right_side {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 15px;
+
+      .booking_img {
+        max-width: 600px;
+        width: 100%;
+        img {
+          width: 100%;
+        }
       }
     }
   }
-}
-.contact_button {
-  text-align: center;
-  padding-top: 73px;
-  padding-bottom: 77px;
-  button {
-    background-color: #00bddf;
-    color: white;
-    padding: 7px 29px;
-    border: none;
-    border-radius: 7px;
-    margin-right: 10px;
+
+  .contact_button {
+    padding-top: 55px;
+    padding-bottom: 55px;
+    .form-btn {
+      padding-left: 94px;
+      input {
+        background-color: #00bddf;
+        color: white;
+        padding: 7px 29px;
+        border: none;
+        border-radius: 7px;
+        margin-right: 10px;
+      }
+    }
   }
 }
 
 // Media Queries
-@media (max-width: 992px) {
-  .contact_form {
-    text-align: center;
-  }
-  .contact_button {
-    padding-top: 29px;
-    padding-bottom: 40px;
-  }
-  .contact .extra textarea {
-    max-width: 752px;
-    height: 301px;
-  }
-}
-@media (max-width: 768px) {
-  .booking_section .booking_text h4 {
-    font-size: 105px;
-  }
-  .contact_form .row .col-lg-3 {
-    margin-top: 30px;
-    margin-bottom: 20px;
-  }
-}
-@media (max-width: 425px) {
-  .booking_section .booking_text h4 {
-    font-size: 68px;
-  }
+
+@media (max-width: 1024px) {
   .contact {
     margin: unset;
     border-radius: unset;
   }
+}
+@media (max-width: 992px) {
+  .contact .top_text {
+    padding-bottom: 30px;
+  }
+  .contact_form {
+    text-align: center;
+  }
+
+  .contact .contact_button {
+    padding-top: 29px;
+    padding-bottom: 40px;
+  }
+  .contact .contact_button .form-btn {
+    padding-left: unset;
+  }
+}
+
+@media (max-width: 768px) {
+  .booking_section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .booking_section .booking_text h4 {
+    font-size: 105px;
+  }
+
+  .contact_form .row .col-lg-3 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .contact .parent_booking {
+    flex-direction: column;
+  }
+  .contact .parent_booking .left_side {
+    width: 100%;
+    order: 2;
+  }
+  .contact .parent_booking .right_side {
+    width: 100%;
+  }
+  .contact .parent_booking .right_side .booking_img {
+    max-width: unset;
+    width: unset;
+  }
+}
+
+@media (max-width: 425px) {
+  .booking_section .booking_text h4 {
+    font-size: 68px;
+  }
+
+  .contact {
+    margin: unset;
+    border-radius: unset;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   .contact_form .row .col-lg-3 {
     margin-top: 10px;
+  }
+  .contact .parent_booking .right_side {
+    padding-right: unset;
   }
   .contact_button button {
     margin-bottom: 10px;
@@ -1559,5 +1654,121 @@ footer {
   }
   .bottom_all .left .b_search {
     width: unset;
+  }
+}
+
+.blog_detail {
+  background-color: #f1f1f1;
+  .left {
+    margin-right: 59px;
+    .b_search {
+      padding: 18px 22px;
+      background-color: #d5d5d5;
+      margin-bottom: 56px;
+      input {
+        padding: 5px 13px;
+        margin-right: 23px;
+        border-radius: 9px;
+      }
+      button {
+        background-color: #00bddf;
+        color: black;
+        border: none;
+        padding: 5px 5px;
+        border-radius: 5px;
+      }
+    }
+    .b_recent {
+      margin-bottom: 46px;
+      background-color: white;
+      .rexent_head {
+        background-color: #d5d5d5;
+        padding: 17px 0;
+        text-align: center;
+        h3 {
+          font-size: 36px;
+          color: black;
+        }
+      }
+      .para {
+        padding: 22px 28px;
+      }
+    }
+  }
+  padding: 100px 0;
+  .top_text {
+    h4 {
+      font-size: 44px;
+      padding-bottom: 20px;
+    }
+    .top {
+      padding-bottom: 20px;
+      color: #00bddf;
+      font-size: 20px;
+    }
+    .bottom {
+      padding-bottom: 20px;
+    }
+  }
+  .blog_mid_img {
+    img {
+      width: 100%;
+    }
+  }
+  .blog_para_sec {
+    padding-top: 20px;
+    p {
+      font-size: 19px;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .blog_detail .mid .b_recent {
+    width: unset;
+  }
+}
+
+@media (max-width: 1024px) {
+  .blog_detail .left {
+    margin-right: unset;
+  }
+}
+@media (max-width: 991px) {
+  .blog_detail .left {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .blog_detail {
+    padding: 50px 0;
+  }
+  .blog_detail .top_text h4 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 440px) {
+  .blog_banner h2 {
+    font-size: 70px;
+  }
+
+  .blog_detail .mid .b_recent {
+    width: unset;
+  }
+  .blog_detail .mid .para {
+    text-align: center;
+    padding: 5px 10px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .blog_detail .mid .para {
+    padding-left: unset;
+    text-align: center;
+  }
+
+  .blog_detail .top_text {
+    white-space: nowrap;
   }
 }

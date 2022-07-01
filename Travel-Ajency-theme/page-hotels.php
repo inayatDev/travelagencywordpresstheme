@@ -11,15 +11,16 @@
     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</p>
   </div>
   <div class="col-lg-11 col-md-12 m-auto">
+  <form method = "post" action = "">
     <div class="main_bg d-flex">
       <div class="one f_input">
-        <input type="text" name="" id="" placeholder="Enter your Destination" />
+        <input type="text" name="destination" id="destination" placeholder="Enter your Destination" value = ""/>
       </div>
       <div class="one s_dateFrom">
         <input
           type="date"
           id="start"
-          name="trip-start"
+          name="tripin"
           value="Date From"
           placeholder="ffff"
         />
@@ -28,13 +29,13 @@
         <input
           type="date"
           id="start"
-          name="trip-start"
-          value="2018-07-22"
-          max="2018-12-31"
+          name="tripout"
+          value="2021-07-22"
+          max="2022-12-31"
         />
       </div>
       <div class="one tripType">
-        <select>
+        <select name ="triptype">
           <option value="0">Trip Type</option>
           <option value="1">Murre</option>
           <option value="2">Swat</option>
@@ -42,9 +43,10 @@
         </select>
       </div>
       <div class="one search_btn">
-        <button>Search Now</button>
+        <button type = "submit" name = "submit">Book Now</button>
       </div>
     </div>
+  </form>
   </div>
 </section>
 
@@ -78,16 +80,16 @@
                         </div>
                         <div class="items_text">
                             <div class="text1 d-flex justify-content-between">
-                                <h3><?php the_title();?></h3>
+                                <h3 id = "hotel_title"><?php the_title();?></h3>
                             </div>
                             <div class="text2">
                                 <h4>SHYLET(SYT)-Dakha(DAC)</h4>
                                 <p>25 Dec (30 min)</p>
                             </div>
                             <div class="items_btn">
-                                <a href="<?php the_permalink()?>">
-                                <button>Book Now</button>
-                                </a>
+                              <a href ="#">
+                              <button onclick="myFunction()">Book Now </button>
+                              </a>
                             </div>
                         </div>
                     </div>

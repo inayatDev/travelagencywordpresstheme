@@ -330,7 +330,7 @@ function setting_page_travel_agency() {
 add_action('admin_menu', 'setting_page_travel_agency');
 
 function setting_page_select_bookings() {
-  add_menu_page('Bookings', 'Bookings', 'manage_options', 'theme-booking', 'booking_cal_back'); 
+  add_menu_page('Flight Bookings', 'Flight Bookings', 'manage_options', 'theme-booking', 'booking_cal_back'); 
 
 }
 add_action('admin_menu', 'setting_page_select_bookings');
@@ -366,24 +366,14 @@ function booking_cal_back(){
        <td><?php echo $res->adults; ?></td>
        <td><?php echo $res->children; ?></td>
        <td><?php echo $res->message; ?></td>
-
         <?php
-    // echo $res->email;
     }
     ?>
 </tr>
 </table>
     </div>
     <?php
-
 }
-
-// function fetch_booking_db(){
-
-// }
-// }
-// add_action('init' , 'fetch_booking_db');
-
 function custom_search_form( $form, $value = "Search", $post_type = 'post' ) {
     $form_value = (isset($value)) ? $value : attribute_escape(apply_filters('the_search_query', get_search_query()));
     $form = '<form method="get" id="searchform" action="' . get_option('home') . '/" >
@@ -404,7 +394,7 @@ function aw_custom_meta_boxes( $post_type, $post ) {
         'aw-meta-box',
         __( 'Header Image' ),
         'render_aw_meta_box',
-        array('post', 'page'), //post types here
+        array('page'), //post types here
         'normal',
         'high'
     );
@@ -442,3 +432,66 @@ function aw_save_postdata($post_id)
     }
 }
 add_action('save_post', 'aw_save_postdata');
+
+ function create_db_hotel_booking()
+ {
+global $wpdb;
+global $jal_db_version;
+$table_name = $wpdb->prefix . 'hotels_booking';
+$charset_collate = $wpdb->get_charset_collate();
+$sql = "CREATE TABLE $table_name (
+  id mediumint(9) NOT NULL AUTO_INCREMENT,
+  destination text NOT NULL,
+  checkin tinytext NOT NULL,
+  checkout text NOT NULL,
+  triptype text NOT NULL,
+  PRIMARY KEY  (id)
+) $charset_collate;";
+
+require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+dbDelta( $sql );
+}
+ 
+ add_action('init' , 'create_db_hotel_booking');
+
+  function insert_in_hotel(){
+  global $wpdb;
+     if ( isset( $_POST['submit'] ) ){
+        $destination = $_POST['destination'];
+        $tripin  = $_POST['tripin'];
+        $tripout = $_POST['tripout'];
+        $triptype = $_POST['triptype'];
+        if($destination == '' || $tripin == '' ||  $tripout == '' ){
+            echo '<script>alert("please insert the values")</script>';
+        }
+        else{
+  $result = $wpdb->insert( 'wp_hotels_booking', array(
+    'destination' => $destination,
+    'checkin' => $tripin,
+    'checkout' =>  $tripout,
+    'triptype' => $triptype ));
+ if( FALSE === $result )
+    {
+    echo( "Failed!" );
+    } 
+else {
+    echo( "<script>alert('Booking Completed Succesfully')</script>" );
+    }
+}
+ }
+
+ }
+ add_action('init' , 'insert_in_hotel');
+
+ function setting_page_hotels_booking() {
+  add_menu_page('Hotel Bookings', 'Hotel Bookings', 'manage_options', 'theme-hotel', 'hotel_cal_back'); 
+
+}
+add_action("admin_menu", "setting_page_hotels_booking");
+function hotel_cal_back(){
+    ?>
+    <div class = "wrap">
+        <h3>All Hotel Bookings</h3>
+    </div>
+    <?php
+}

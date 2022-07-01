@@ -20,5 +20,5 @@
     wp_enqueue_script( 'script-jquery-js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js' );
     wp_enqueue_script( 'script-ajax-carousel', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js');
     wp_enqueue_script('jscustom' , get_template_directory_uri() .'/js/slick.min.js');
-   //  wp_enqueue_script('jscustom-new' , get_template_directory_uri() .'/js/main.js' ,array('jquery'));
+     wp_enqueue_script('jscustom-new' , get_template_directory_uri() .'/js/main.js');
     
