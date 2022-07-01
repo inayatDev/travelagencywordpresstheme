@@ -337,29 +337,36 @@ add_action('admin_menu', 'setting_page_select_bookings');
 function booking_cal_back(){
     ?>
     <div class = "wrap">
-        <h3>All Booking Recieved</h3>
-    <table style = "border: 1px solid black; width:600px" >
+        <h3 style="text-align:center;">All Booking Recieved</h3>
+    <table border="1" style="width:90%; margin:auto;">
         <tr>
-            <td>S.No</td>
-            <td>Email </td>
-            <td>Name</td>
-            <td>Arival Date</td>
-            <td>Country</td>
-            <td>Phone</td>
-            <td>Adult</td>
-            <td>Childern</td>
-            <td>Message</td>
+            <th>ID</th>
+            <th>Email </th>
+            <th>Name</th>
+            <th>Arival Date</th>
+            <th>Country</th>
+            <th>Phone</th>
+            <th>Adult</th>
+            <th>Childern</th>
+            <th>Message</th>
 </tr>
     <?php
     global $wpdb;
     $wpdb_prefix = $wpdb->prefix;
-    $result = $wpdb->get_results(sprintf("SELECT email, name FROM  wp_travel_agency_booking"));
+    $result = $wpdb->get_results(sprintf("SELECT * FROM  wp_travel_agency_booking"));
     foreach($result as $res){
         ?>
     <tr>
        <td><?php echo $res->id; ?></td> 
-      <td><?php echo $res->email; ?></td>
+       <td><?php echo $res->email; ?></td>
        <td><?php echo $res->name; ?></td>
+       <td><?php echo $res->arrivaldate; ?></td>
+       <td><?php echo $res->country; ?></td>
+       <td><?php echo $res->phone; ?></td>
+       <td><?php echo $res->adults; ?></td>
+       <td><?php echo $res->children; ?></td>
+       <td><?php echo $res->message; ?></td>
+
         <?php
     // echo $res->email;
     }

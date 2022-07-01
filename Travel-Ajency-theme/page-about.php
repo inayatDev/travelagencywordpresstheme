@@ -19,12 +19,12 @@
             <div class="row">
                 <div class="col-lg-6 col-md-8 m-auto">
                     <div class="story_img">
-                        <img src="./images/home/female-tourists-are-happy-refreshed-waterfall.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/home/female-tourists-are-happy-refreshed-waterfall.png" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-8 m-auto">
                     <div class="story_img">
-                        <img src="./images/home/full-shot-happy-kid-having-fun-winter-time.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/home/full-shot-happy-kid-having-fun-winter-time.png" alt="">
                     </div>
                 </div>
             </div>
