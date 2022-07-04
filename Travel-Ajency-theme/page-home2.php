@@ -1,30 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOmepage</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&displ">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
-    <link rel="stylesheet" href="./css/home2.css">
-
-
-</head>
-
-<body>
-    <!-- Header Section Start -->
-
-    <!-- HEader Section End -->
-
-    <!-- Banner Section Start -->
+<?php get_header();?>
     <section class="banner">
         <div class="banner_text">
             <h1>Wellcome to World's No 1 <span>Travel Agency</span></h1>
@@ -406,9 +380,4 @@
 
 
 
-
-    <script src="js/Jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-</body>
-
-</html>
+<?php get_footer();?>

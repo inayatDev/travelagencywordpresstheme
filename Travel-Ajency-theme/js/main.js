@@ -1,5 +1,6 @@
-$(document).ready(function () {
-  $(".multiple_items").slick({
+var $jq = jQuery.noConflict();
+$jq(document).ready(function () {
+  $jq(".multiple_items").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
@@ -40,8 +41,8 @@ $(document).ready(function () {
   });
 });
 
-$(document).ready(function () {
-  $(".hero-slider").slick({
+$jq(document).ready(function () {
+  $jq(".hero-slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
