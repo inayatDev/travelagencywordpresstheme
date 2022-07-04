@@ -75,6 +75,6 @@ $jq(document).ready(function () {
 // function myFunction(x) {
 //     x.classList.toggle("change");
 //   }
-$(document).ready(function () {
+$jq(document).ready(function () {
   console.log("jq is working!");
 });

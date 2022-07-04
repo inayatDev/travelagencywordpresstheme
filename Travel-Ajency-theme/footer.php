@@ -50,7 +50,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 
     <script>
-        $('.owl-carousel').owlCarousel({
+        var $jqnew = jQuery.noConflict();
+        $jqnew('.owl-carousel').owlCarousel({
             nav: true,
             dots: false,
             dotsEach: true,

@@ -148,8 +148,8 @@
         <div class="carosel_img">
             <img src=<?php the_post_thumbnail();?>
             <div class="carosel_text">
-                <h4><a href = "<?php the_permalink(); ?>"> <?php the_title(); ?></a></h4>
-                <p><?php the_content();?></p>
+                <h4> <?php the_title(); ?></h4>
+                <?php the_content();?>
             </div>
         </div>
             <?php 
@@ -158,47 +158,3 @@
             ?>
 </section>
 <?php get_footer();?>
-<!-- carosel section End -->
-
-
-     <!-- Footer Section Start -->
-     <!-- <footer>
-        <div class=" footer_container d-flex justify-content-between">
-            <div class="navbar_image">
-                <a class="navbar-brand" href="#"><img src="./images/home/Untitled-1.webp" alt=""></a>
-            </div>
-            <div class="right_sec">
-                <ul class=" d-flex">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Tours</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Hotels</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Booking</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About US</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./blog.html">Blog</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </footer> -->
-
-    <!-- Footer Section end -->
-    
-    <!-- <script src="js/Jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/slick.min.js"></script> -->
-    <!-- <script type="text/javascript" src="js/main.js"></script> -->
-<!-- </body>
-
-</html> -->
-

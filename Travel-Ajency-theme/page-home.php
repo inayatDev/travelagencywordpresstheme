@@ -35,9 +35,7 @@
                     'orderby' => 'title', 
                     'order' => 'ASC', 
                 );
-
                 $loop = new WP_Query( $args ); 
-                    
                 while ( $loop->have_posts() ) : $loop->the_post(); 
                      ?>
                     <div class="items">
@@ -66,7 +64,6 @@
                 </div>
             </div>
         </div>
-
     </section>
     <!-- ticket section end -->
 
